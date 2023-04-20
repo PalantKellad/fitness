@@ -7,9 +7,53 @@
     <meta name="description" content="Фитнес центр в Омске">
     <title>Фитнес центр</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
-
+    <div class="page">
+      <header class="page__header hero container">
+        <div class="hero__header">
+          <a class="hero__logo logo" href="./">
+            <img src="./img/svg/logo.svg" width="124" height="44" alt="Фитнес центр в Омске.">
+          </a>
+          <a class="hero__phone" href="tel:+78005555555">8-800-555-55-55</a>
+          <div class="hero__content">
+            <h1>Фитнес Центр</h1>
+            <span>Омск</span>
+            <ul>
+              <li>Тренажёрный зал</li>
+              <li>Групповые занятия</li>
+              <li>Кардио&#8209;зона</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main class="page__content">
+        <section class="about container">
+          <h2>Тренажерный зал</h2>
+          <span>Просторный зал площадью 900 кв/м</span>
+          <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+          <div class="about__more">
+            <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/gym-big.webp 1x, ./img/gym-big@2x.webp 2x" width="660" height="401">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gym-medium.webp 1x, ./img/gym-medium@2x.webp 2x" width="678" height="345">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/gym-small.webp 1x, ./img/gym-small@2x.webp 2x" width="320" height="313">
+            <img src="./img/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
+          </picture>
+          <div class="about__video video"></div>
+        </section>
+      </main>
+      <footer class="page__footer"></footer>
+    </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
