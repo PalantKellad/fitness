@@ -1,8 +1,8 @@
 {
-  "name": "fitness",
+  "name": "Liga-A-accelerator-template",
   "version": "2.0.0",
   "type": "module",
-  "description": "Фитнес центр",
+  "description": "Стартовый шаблон сборки Лиги А",
   "browserslist": [
     "last 3 versions",
     "IE 11",
@@ -15,8 +15,7 @@
     "build": "gulp build",
     "dev": "gulp dev",
     "start": "gulp start",
-    "webp": "gulp webp",
-    "deploy": "gulp build && gh-pages -d build"
+    "webp": "gulp webp"
   },
   "editorconfig-cli": [
     "*.json",
@@ -37,7 +36,6 @@
     "browserify": "17.0.0",
     "del": "6.1.1",
     "eslint": "7.32.0",
-    "gh-pages": "^5.0.0",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
     "gulp-csso": "4.0.1",
@@ -48,6 +46,7 @@
     "gulp-sass": "5.1.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-stacksvg": "^2.0.1",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-svgstore": "9.0.0",
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",

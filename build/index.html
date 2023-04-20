@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Фитнес центр в Омске">
-    <title>Фитнес центр</title>
+    <title>Фитнес центр Supergym</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="manifest" href="./site.webmanifest">
     <link rel="icon" href="./favicon.ico" sizes="any">
@@ -18,13 +18,22 @@
   </head>
   <body>
     <div class="page">
-      <header class="page__header hero container">
-        <div class="hero__header">
-          <a class="hero__logo logo" href="./">
-            <img src="./img/svg/logo.svg" width="124" height="44" alt="Фитнес центр в Омске.">
-          </a>
-          <a class="hero__phone" href="tel:+78005555555">8-800-555-55-55</a>
-          <div class="hero__content">
+      <header class="page__header hero">
+        <div class="container">
+          <div class="hero__header">
+            <a class="hero__logo logo" href="./">
+              <img src="./img/svg/logo.svg" width="124" height="44" alt="Логотип фитнес центра Supergym.">
+            </a>
+            <a class="hero__phone" href="tel:+78005555555">8-800-555-55-55</a>
+          </div>
+          <div class="hero__content" style="
+          --header-bg-big-url: url(../img/hero/hero-big.webp);
+          --header-bg-medium-url: url(../img/hero/hero-medium.webp);
+          --header-bg-small-url: url(../img/hero/hero-small.webp);
+          --header-retina-bg-big-url: url(../img/hero/hero-big@2x.webp);
+          --header-retina-bg-medium-url: url(../img/hero/hero-medium@2x.webp);
+          --header-retina-bg-small-url: url(../img/hero/hero-small@2x.webp);
+          ">
             <h1>Фитнес Центр</h1>
             <span>Омск</span>
             <ul>
@@ -32,6 +41,7 @@
               <li>Групповые занятия</li>
               <li>Кардио&#8209;зона</li>
             </ul>
+            <a class="hero__order-button" href="#">Купить абонемент</a>
           </div>
         </div>
       </header>
@@ -44,10 +54,10 @@
             <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
           </div>
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/gym-big.webp 1x, ./img/gym-big@2x.webp 2x" width="660" height="401">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gym-medium.webp 1x, ./img/gym-medium@2x.webp 2x" width="678" height="345">
-            <source type="image/webp" media="(max-width: 767px)" srcset="./img/gym-small.webp 1x, ./img/gym-small@2x.webp 2x" width="320" height="313">
-            <img src="./img/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x" width="660" height="401">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x" width="678" height="345">
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="320" height="313">
+            <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
           </picture>
           <div class="about__video video"></div>
         </section>
