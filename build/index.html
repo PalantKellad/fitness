@@ -22,7 +22,7 @@
         <div class="container">
           <div class="hero__header">
             <a class="hero__logo logo" href="./">
-              <img src="./img/svg/logo.svg" width="124" height="44" alt="Логотип фитнес центра Supergym.">
+              <img src="./img/svg/logo.svg" width="124" height="24" alt="Логотип фитнес центра Supergym.">
             </a>
             <a class="hero__phone" href="tel:+78005555555">8-800-555-55-55</a>
           </div>
@@ -34,7 +34,7 @@
           --header-retina-bg-medium-url: url(../img/hero/hero-medium@2x.webp);
           --header-retina-bg-small-url: url(../img/hero/hero-small@2x.webp);
           ">
-            <h1>Фитнес Центр</h1>
+            <h1>Фитнес центр</h1>
             <span>Омск</span>
             <ul>
               <li>Тренажёрный зал</li>
@@ -47,19 +47,28 @@
       </header>
       <main class="page__content">
         <section class="about container">
-          <h2>Тренажерный зал</h2>
-          <span>Просторный зал площадью 900 кв/м</span>
-          <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-          <div class="about__more">
-            <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+          <div class="about__text">
+            <h2>Тренажерный зал</h2>
+            <span>Просторный зал площадью 900 кв/м</span>
+            <hr>
+            <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+            <div class="about__more">
+              <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+            </div>
           </div>
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x" width="660" height="401">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x" width="678" height="345">
-            <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="320" height="313">
-            <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
-          </picture>
-          <div class="about__video video"></div>
+          <div class="about__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x" width="660" height="401">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x" width="678" height="345">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="320" height="313">
+              <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
+            </picture>
+          </div>
+          <div class="about__video video" style="
+            --video-cover:url(../img/video/video-cover-big.webp);
+          ">
+            <button class="video__button" type="button">Включить видео</button>
+          </div>
         </section>
       </main>
       <footer class="page__footer"></footer>

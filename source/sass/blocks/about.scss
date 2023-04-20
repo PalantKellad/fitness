@@ -1,0 +1,48 @@
+.about {
+  position: relative;
+  display: flex;
+  padding-block: 120px;
+}
+
+.about__text {
+  flex: 1 1 43%;
+  padding-top: 34px;
+  padding-right: 83px;
+  padding-left: 60px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 2px;
+    font: 600 48px / 68px $ff-alumni-sans;
+    letter-spacing: 0.03em;
+  }
+
+  span {
+    font: 400 18px / 1.5 $ff-roboto-condensed;
+  }
+
+  hr {
+    margin-bottom: 39px;
+    border: none;
+  }
+
+  p {
+    margin: 0;
+    font: 300 16px / 1.5 $ff-roboto-condensed;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.about__video {
+  position: absolute;
+  z-index: 1;
+  bottom: 5px;
+  left: 53.2%;
+  margin-inline: auto;
+  width: 364px;
+  height: 228px;
+  transform: translateX(-50%);
+}

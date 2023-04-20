@@ -1,21 +1,58 @@
 .hero {
-  --bg-gradient: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg) no-repeat;
+  --bg-gradient: conic-gradient(from 131.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg) no-repeat;
 
   min-height: 658px;
   padding-block: 30px;
   background: var(--bg-gradient);
+
+  @include vp-1023 {
+    min-height: 554px;
+    padding-block: 34px;
+  }
+
+  @include vp-767 {
+    min-height: 491px;
+    padding-block: 16px;
+  }
 }
 
 .hero__header {
   display: flex;
   align-items: end;
   justify-content: space-between;
+
+  @include vp-1023 {
+    align-items: center;
+  }
+}
+
+.hero__logo {
+  @include vp-1023 {
+    width: 82px;
+    height: 17px;
+    padding-top: 5px;
+  }
+
+  @include vp-767 {
+    width: 69px;
+    height: 24px;
+    padding-top: 5px;
+  }
 }
 
 .hero__phone {
   font: 600 26px / 31px $ff-alumni-sans;
   letter-spacing: 0.03em;
   color: var(--base-light);
+
+  @include vp-1023 {
+    font: 600 24px / 29px $ff-alumni-sans;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font: 600 20px / 24px $ff-alumni-sans;
+  }
 }
 
 .hero__content {
@@ -30,6 +67,18 @@
   padding-right: 60.6%;
   color: var(--base-light);
 
+  @include vp-1023 {
+    --bg-image: var(--header-bg-medium-url);
+
+    padding-top: 68px;
+    padding-right: 43%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 38% 62%;
+    padding-right: 0;
+  }
+
   h1 {
     order: 3;
     margin: 0 61px 47px 0;
@@ -37,7 +86,18 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: right;
-    -webkit-text-stroke: 2px var(--base-light);
+    -webkit-text-stroke: 4px var(--base-light);
+
+    @include vp-1023 {
+      margin-bottom: 38px;
+      font: 600 72px / 86px $ff-alumni-sans;
+      text-transform: none;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      margin-bottom: 23px;
+    }
   }
 
   span {
@@ -48,6 +108,18 @@
     font: 600 48px / 58px $ff-alumni-sans;
     letter-spacing: 0.03em;
     text-transform: lowercase;
+
+    @include vp-1023 {
+      margin-right: 66px;
+      margin-bottom: 7px;
+      font: 600 34px / 41px $ff-alumni-sans;
+    }
+
+    @include vp-767 {
+      margin-right: 3px;
+      margin-bottom: 13px;
+      font: 600 28px / 34px $ff-alumni-sans;
+    }
   }
 
   ul {
@@ -57,6 +129,15 @@
     padding: 0;
     padding-top: 36px;
     text-align: right;
+
+    @include vp-1023 {
+      margin-left: -3px;
+      padding-top: 31px;
+    }
+
+    @include vp-767 {
+      padding-top: 24px;
+    }
   }
 
   li {
@@ -77,6 +158,17 @@
     height: 556px;
     background: var(--bg-image) no-repeat;
     background-size: contain;
+
+    @include vp-1023 {
+      top: 19px;
+      right: 0;
+      width: 324px;
+      height: 390px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
 
@@ -90,5 +182,16 @@
   letter-spacing: 0.05em;
   color: inherit;
   text-transform: uppercase;
+  text-align: center;
   border: 4px solid var(--base-light);
+
+  @include vp-1023 {
+    padding-inline: 32px;
+  }
+
+  @include vp-767 {
+    justify-self: stretch;
+    margin-right: 0;
+    padding-block: 21px;
+  }
 }
