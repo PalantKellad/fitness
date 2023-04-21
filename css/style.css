@@ -1253,7 +1253,9 @@ button.swiper-pagination-bullet {
 
 :root {
   --themed-dark: #102654;
+  --themed-bright: #d10a42;
   --base-light: #ffffff;
+  --base-neutral: #f8f9fc;
 }
 
 @font-face {
@@ -1509,10 +1511,13 @@ button,
 }
 
 .container {
+  --padding: 20px;
+  --max-width: 1200px;
+  --min-width: 290px;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--padding);
 }
 
 .page {
@@ -1664,10 +1669,11 @@ button,
 
 .about {
   position: relative;
+  grid-column: main;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-block: 120px;
+  padding-block: 120px 235px;
 }
 
 .about__text {
@@ -1704,21 +1710,23 @@ button,
   margin-bottom: 8px;
 }
 
+.about__image img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .about__video {
   position: absolute;
   z-index: 1;
-  bottom: 5px;
+  bottom: 120px;
   left: 53.2%;
-  margin-inline: auto;
   width: 364px;
   height: 228px;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .video {
-  --bg-url: var(--video-cover);
+  --bg-url: var(--video-cover-big);
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -1737,28 +1745,32 @@ button,
 }
 
 .video__button {
+  --button-size: 72px;
+  --icon-size: 55% / 18%;
   position: relative;
   z-index: 2;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 72px;
-  height: 72px;
+  width: var(--button-size);
+  height: var(--button-size);
   font-size: 0;
-  background: url("../img/stack.svg#icon-play") no-repeat 55%/18%, -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
-  background: url("../img/stack.svg#icon-play") no-repeat 55%/18%, linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
+  background: url("../img/stack.svg#icon-play") no-repeat var(--icon-size), -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
+  background: url("../img/stack.svg#icon-play") no-repeat var(--icon-size), linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
 }
 
 .video__button::before {
+  --stroke-size: 100px;
   position: absolute;
   z-index: -2;
   left: 50%;
   top: 50%;
   content: "";
-  width: 100px;
-  height: 100px;
+  width: var(--stroke-size);
+  height: var(--stroke-size);
   padding: 1px;
   background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
   background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
@@ -1774,15 +1786,72 @@ button,
   mask-composite: exclude;
 }
 
-@media (max-width: 1199px) {
-  .container {
-    padding: 0 20px;
+.subscription {
+  position: relative;
+  padding-block: 120px;
+  background-color: var(--base-neutral);
+}
+
+.subscription::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+  width: 287px;
+  height: 494px;
+  background: url("../img/plates-big.webp") no-repeat;
+}
+
+.subscription h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  font: 600 54px/65px "Alumni Sans", "Arial", sans-serif;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.tabs {
+  position: relative;
+  z-index: 1;
+}
+
+.tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-block: 20px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.tabs__button {
+  margin: 0;
+  padding: 0;
+  font: 400 20px/1.5 "Roboto Condensed", "Arial", sans-serif;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .about__video {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .container {
-    padding: 0 45px;
+    --max-width: 100%;
+    --padding: 45px;
   }
 
   .hero {
@@ -1797,6 +1866,8 @@ button,
   }
 
   .hero__logo {
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
     width: 82px;
     height: 17px;
     padding-top: 5px;
@@ -1840,11 +1911,82 @@ button,
   .hero__order-button {
     padding-inline: 32px;
   }
+
+  .about {
+    display: block;
+    padding-block: 67px 183px;
+  }
+
+  .about__text {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-bottom: 35px;
+  }
+
+  .about__text h2 {
+    margin-bottom: 0;
+    padding-left: 8px;
+    font: 600 42px/50px "Alumni Sans", "Arial", sans-serif;
+    text-align: center;
+  }
+
+  .about__text span {
+    display: block;
+    padding-left: 23px;
+    text-align: center;
+  }
+
+  .about__text hr {
+    margin-bottom: 33px;
+  }
+
+  .about__text p {
+    padding-left: 23px;
+    text-align: center;
+  }
+
+  .about__more p {
+    display: none;
+  }
+
+  .about__image {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  .about__video {
+    bottom: 101px;
+    left: 50%;
+    width: 266px;
+    height: 167px;
+  }
+
+  .video {
+    --bg-url: var(--video-cover-medium);
+  }
+
+  .video__button {
+    --button-size: 52px;
+    --icon-size: 55% / 18%;
+  }
+
+  .video__button::before {
+    --stroke-size: 73px;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 15px;
+    --max-width: 100%;
+    --padding: 15px;
+  }
+
+  .container--full-mobile {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [full-start] minmax(var(--padding), 1fr) [main-start] minmax(var(--min-width), var(--max-width)) [main-end] minmax(var(--padding), 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(var(--padding), 1fr) [main-start] minmax(var(--min-width), var(--max-width)) [main-end] minmax(var(--padding), 1fr) [full-end];
+    padding-inline: 0;
   }
 
   .hero {
@@ -1892,5 +2034,57 @@ button,
     justify-self: stretch;
     margin-right: 0;
     padding-block: 21px;
+  }
+
+  .about {
+    grid-column: full;
+    padding-block: 64px 70px;
+  }
+
+  .about__text {
+    margin-bottom: 25px;
+    padding-top: 0;
+    padding-inline: 15px;
+  }
+
+  .about__text h2 {
+    margin-bottom: 5px;
+    padding-left: 0;
+    font: 600 32px/38px "Alumni Sans", "Arial", sans-serif;
+    text-align: left;
+  }
+
+  .about__text span {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .about__text hr {
+    margin-bottom: 24px;
+  }
+
+  .about__text p {
+    padding-inline: 0 27px;
+    text-align: left;
+  }
+
+  .about__image {
+    margin-bottom: 40px;
+  }
+
+  .about__video {
+    position: relative;
+    inset: initial;
+    width: 100%;
+    height: auto;
+    min-height: 167px;
+    aspect-ratio: 320/167;
+    -webkit-transform: 0;
+    -ms-transform: 0;
+    transform: 0;
+  }
+
+  .video {
+    --bg-url: var(--video-cover-small);
   }
 }

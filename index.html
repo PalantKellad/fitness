@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Фитнес центр в Омске">
-    <title>Фитнес центр Supergym</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link rel="icon" href="./icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
-    <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="page">
-      <header class="page__header hero">
-        <div class="container">
-          <div class="hero__header">
-            <a class="hero__logo logo" href="./">
-              <img src="./img/svg/logo.svg" width="124" height="24" alt="Логотип фитнес центра Supergym.">
-            </a>
-            <a class="hero__phone" href="tel:+78005555555">8-800-555-55-55</a>
-          </div>
-          <div class="hero__content" style="
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Фитнес центр в Омске">
+  <title>Фитнес центр Supergym</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+  <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="page">
+    <header class="page__header hero">
+      <div class="container">
+        <div class="hero__header">
+          <a class="hero__logo logo" href="./">
+            <img src="./img/svg/logo.svg" width="124" height="24" alt="Логотип фитнес центра Supergym.">
+          </a>
+          <a class="hero__phone" href="tel:+78005555555">8-800-555-55-55</a>
+        </div>
+        <div class="hero__content" style="
           --header-bg-big-url: url(../img/hero/hero-big.webp);
           --header-bg-medium-url: url(../img/hero/hero-medium.webp);
           --header-bg-small-url: url(../img/hero/hero-small.webp);
@@ -34,46 +36,167 @@
           --header-retina-bg-medium-url: url(../img/hero/hero-medium@2x.webp);
           --header-retina-bg-small-url: url(../img/hero/hero-small@2x.webp);
           ">
-            <h1>Фитнес центр</h1>
-            <span>Омск</span>
-            <ul>
-              <li>Тренажёрный зал</li>
-              <li>Групповые занятия</li>
-              <li>Кардио&#8209;зона</li>
-            </ul>
-            <a class="hero__order-button" href="#">Купить абонемент</a>
-          </div>
+          <h1>Фитнес центр</h1>
+          <span>Омск</span>
+          <ul>
+            <li>Тренажёрный зал</li>
+            <li>Групповые занятия</li>
+            <li>Кардио&#8209;зона</li>
+          </ul>
+          <a class="hero__order-button" href="#">Купить абонемент</a>
         </div>
-      </header>
-      <main class="page__content">
-        <section class="about container">
+      </div>
+    </header>
+    <main class="page__content">
+      <section class="container container--full-mobile">
+        <div class="about">
           <div class="about__text">
             <h2>Тренажерный зал</h2>
             <span>Просторный зал площадью 900 кв/м</span>
             <hr>
             <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
             <div class="about__more">
-              <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;<nobr>кардио-зона</nobr> с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+              <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40 тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
             </div>
           </div>
           <div class="about__image">
             <picture>
-              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x" width="660" height="401">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x" width="678" height="345">
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="320" height="313">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x">
               <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
             </picture>
           </div>
           <div class="about__video video" style="
-            --video-cover:url(../img/video/video-cover-big.webp);
-          ">
+              --video-cover-big:url(../img/video/video-cover-big.webp);
+              --video-cover-medium:url(../img/video/video-cover-medium.webp);
+              --video-cover-small:url(../img/video/video-cover-small.webp);
+            ">
             <button class="video__button" type="button">Включить видео</button>
           </div>
-        </section>
-      </main>
-      <footer class="page__footer"></footer>
-    </div>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+        </div>
+      </section>
+      <section class="subscription">
+        <h2>Абонементы</h2>
+        <div class="subscription__tabs tabs container">
+          <div class="tabs__list" role="tablist" aria-label="Абонементы">
+            <button
+              class="tabs__button"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-1"
+              id="tab-1"
+              tabindex="0">
+              1&nbsp;месяц
+            </button>
+            <button
+              class="tabs__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-2"
+              id="tab-2"
+              tabindex="-1">
+              6&nbsp;месяцев
+            </button>
+            <button
+              class="tabs__button"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-3"
+              id="tab-3"
+              tabindex="-1">
+              12&nbsp;месяцев
+            </button>
+          </div>
+          <div
+            class="tabs__panel"
+            id="panel-1"
+            role="tabpanel"
+            tabindex="0"
+            aria-labelledby="tab-1">
+              <ul class="tabs__content feature-list">
+                <li class="feature-list__item">
+                  <h3>С&nbsp;тренером</h3>
+                  <p>12&nbsp;занятий</p>
+                  <b>5000 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+                <li class="feature-list__item">
+                  <h3>Дневной</h3>
+                  <p>с&nbsp;8:00 до&nbsp;17:00</p>
+                  <b>1700 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+                <li class="feature-list__item">
+                  <h3>Полный день</h3>
+                  <p>с&nbsp;8:00 до&nbsp;22:00</p>
+                  <b>2700 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+              </ul>
+          </div>
+          <div
+            id="panel-2"
+            role="tabpanel"
+            tabindex="0"
+            aria-labelledby="tab-2">
+              <ul class="tabs__content feature-list">
+                <li class="feature-list__item">
+                  <h3>С&nbsp;тренером</h3>
+                  <p>12&nbsp;занятий</p>
+                  <b>28000 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+                <li class="feature-list__item">
+                  <h3>Дневной</h3>
+                  <p>с&nbsp;8:00 до&nbsp;17:00</p>
+                  <b>1600 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+                <li class="feature-list__item">
+                  <h3>Полный день</h3>
+                  <p>с&nbsp;8:00 до&nbsp;22:00</p>
+                  <b>2600 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+              </ul>
+          </div>
+          <div
+            id="panel-3"
+            role="tabpanel"
+            tabindex="0"
+            aria-labelledby="tab-3">
+              <ul class="tabs__content feature-list">
+                <li class="feature-list__item">
+                  <h3>С&nbsp;тренером</h3>
+                  <p>12&nbsp;занятий</p>
+                  <b>50000 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+                <li class="feature-list__item">
+                  <h3>Дневной</h3>
+                  <p>с&nbsp;8:00 до&nbsp;17:00</p>
+                  <b>1500 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+                <li class="feature-list__item">
+                  <h3>Полный день</h3>
+                  <p>с&nbsp;8:00 до&nbsp;22:00</p>
+                  <b>2500 <span>₽</span></b>
+                  <a href="#">Купить абонемент</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer"></footer>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
