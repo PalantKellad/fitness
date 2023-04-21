@@ -1,0 +1,23 @@
+.tabs {
+  position: relative;
+  z-index: 1;
+}
+
+.tabs__list {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-block: 20px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.tabs__button {
+  margin: 0;
+  padding: 0;
+  font: 400 20px / 1.5 $ff-roboto-condensed;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

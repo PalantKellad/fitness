@@ -1,0 +1,23 @@
+.subscription {
+  position: relative;
+  padding-block: 120px;
+  background-color: var(--base-neutral);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -150px;
+    width: 287px;
+    height: 494px;
+    background: url('../img/plates-big.webp') no-repeat;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font: 600 54px / 65px $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+}

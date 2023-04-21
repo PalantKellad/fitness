@@ -1,5 +1,5 @@
 .video {
-  --bg-url: var(--video-cover);
+  --bg-url: var(--video-cover-big);
 
   display: grid;
   place-items: center;
@@ -15,29 +15,48 @@
     height: 100%;
     background-color: #14367A80;
   }
+
+  @include vp-1200 {
+    --bg-url: var(--video-cover-medium);
+  }
+
+  @include vp-767 {
+    --bg-url: var(--video-cover-small);
+  }
 }
 
 .video__button {
+  --button-size: 72px;
+  --icon-size: 55% / 18%;
+
   position: relative;
   z-index: 2;
   appearance: none;
-  width: 72px;
-  height: 72px;
+  width: var(--button-size);
+  height: var(--button-size);
   font-size: 0;
   background:
-    url('../img/stack.svg#icon-play') no-repeat 55% / 18%,
+    url('../img/stack.svg#icon-play') no-repeat var(--icon-size),
     linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
+
+  @include vp-1200 {
+    --button-size: 52px;
+    --icon-size: 55% / 18%;
+  }
 
   &::before {
+    --stroke-size: 100px;
+
     position: absolute;
     z-index: -2;
     left: 50%;
     top: 50%;
     content: "";
-    width: 100px;
-    height: 100px;
+    width: var(--stroke-size);
+    height: var(--stroke-size);
     padding: 1px;
     background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
     border-radius: 50%;
@@ -45,5 +64,9 @@
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+
+     @include vp-1200 {
+      --stroke-size: 73px;
+     }
    }
 }
