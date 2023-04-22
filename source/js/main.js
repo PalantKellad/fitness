@@ -1,4 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import {findVideos} from './modules/video/video';
 
 // ---------------------------------
 
@@ -8,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  findVideos();
 
   // Modules
   // ---------------------------------

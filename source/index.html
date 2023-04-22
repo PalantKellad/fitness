@@ -61,17 +61,21 @@
           </div>
           <div class="about__image">
             <picture>
-              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x" width="660" height="401">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x" width="678" height="345">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="640" height="626">
               <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
             </picture>
           </div>
-          <div class="about__video video" style="
-              --video-cover-big:url(../img/video/video-cover-big.webp);
-              --video-cover-medium:url(../img/video/video-cover-medium.webp);
-              --video-cover-small:url(../img/video/video-cover-small.webp);
-            ">
+          <div class="about__video video" data-video>
+            <a class="video__link" href="https://youtu.be/9TZXsZItgdw">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="./img/video/video-cover-big.webp 1x, ./img/video/video-cover-big@2x.webp 2x" width="364" height="228">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-cover-medium.webp 1x, ./img/video/video-cover-medium@2x.webp 2x" width="226" height="167">
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-cover-small.webp 1x, ./img/video/video-cover-small@2x.webp 2x" width="320" height="167">
+                <img src="./img/video/video-cover-big.webp" alt="Видео-обзор тренажёрного зала." width="364" height="228" >
+              </picture>
+            </a>
             <button class="video__button" type="button">Включить видео</button>
           </div>
         </div>
