@@ -2,6 +2,14 @@
   display: grid;
   place-items: center;
   background-color: var(--themed-dark);
+
+  @include vp-1200 {
+    aspect-ratio: 266 / 167;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320 / 167;
+  }
 }
 
 .video__link {
@@ -9,6 +17,14 @@
   display: block;
   width: 100%;
   height: 100%;
+
+  @include vp-1200 {
+    aspect-ratio: 266 / 167;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320 / 167;
+  }
 
   &::before {
     content: "";
@@ -18,6 +34,16 @@
     width: 100%;
     height: 100%;
     background-color: #14367A80;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 200;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
   }
 
   img {
@@ -69,4 +95,17 @@
       --stroke-size: 73px;
      }
    }
+}
+
+.video__iframe {
+  width: 100%;
+  height: 100%;
+
+  @include vp-1200 {
+    aspect-ratio: 266 / 167;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320 / 167;
+  }
 }

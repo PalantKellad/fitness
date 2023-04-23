@@ -1,8 +1,10 @@
 function findVideos() {
   const videos = document.querySelectorAll('[data-video]');
 
-  for (let i = 0; i < videos.length; i++) {
-    setupVideo(videos[i]);
+  if (videos || videos.length > 0) {
+    for (let i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+    }
   }
 }
 
@@ -23,9 +25,9 @@ function setupVideo(video) {
   video.classList.add('video--enabled');
 }
 
-function parseLinkURL(source) {
-  const regexp = /https:\/\/youtu\.be\/[a-zA-Z0-9_-]/i;
-  const url = source.href;
+function parseLinkURL(link) {
+  const regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
+  const url = link.href;
   const match = url.match(regexp);
 
   return match[1];
@@ -37,7 +39,7 @@ function createIframe(id) {
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('allow', 'autoplay');
   iframe.setAttribute('src', generateURL(id));
-  iframe.classList.add('video__media');
+  iframe.classList.add('video__iframe');
 
   return iframe;
 }
