@@ -2160,6 +2160,10 @@ button,
 
 .tabs__panel {
   padding-block: 45px;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
 }
 @media (max-width: 1199px) {
   .tabs__panel {
@@ -2179,6 +2183,27 @@ button,
   margin: 0;
 }
 
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 .feature-list {
   display: -ms-grid;
   display: grid;

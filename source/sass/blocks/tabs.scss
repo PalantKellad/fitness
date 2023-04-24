@@ -73,6 +73,8 @@
 
 .tabs__panel {
   padding-block: 45px;
+  animation-duration: 400ms;
+  animation-name: slidein;
 
   @include vp-1200 {
     padding-block: 51px;
@@ -89,4 +91,16 @@
 
 .tabs__content {
   margin: 0;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
