@@ -1,0 +1,17 @@
+.promo-card {
+  display: flex;
+
+  h2 {
+    margin: 0;
+    font: 600 82px / 79px $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--base-light);
+  }
+}
+
+.promo-card__description {
+  padding: 85px;
+  background-color: var(--base-bright);
+}
