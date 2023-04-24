@@ -2160,10 +2160,8 @@ button,
 
 .tabs__panel {
   padding-block: 45px;
-  -webkit-animation-duration: 400ms;
-          animation-duration: 400ms;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
+  -webkit-animation: 400ms ease-out slidein;
+          animation: 400ms ease-out slidein;
 }
 @media (max-width: 1199px) {
   .tabs__panel {
@@ -2185,23 +2183,23 @@ button,
 
 @-webkit-keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
   }
   to {
-    margin-left: 0%;
-    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
   }
   to {
-    margin-left: 0%;
-    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 .feature-list {
