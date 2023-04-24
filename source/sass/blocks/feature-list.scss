@@ -1,0 +1,163 @@
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 54px;
+  padding: 0 7px;
+
+  @include vp-1200 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @include vp-767 {
+    gap: 52px;
+  }
+
+}
+
+.feature-list__item {
+  --stroke-background: var(--base-light);
+  --primary-accent: #ed0233;
+  --secondary-accent: #003eb7;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 57px 69px 59px;
+  background-color: var(--base-light);
+
+  @include vp-1200 {
+    padding-inline: 110px;
+  }
+
+  @include vp-767 {
+    padding: 44px 34px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -7px;
+    background: var(--stroke-background);
+  }
+
+  @include hover {
+    --stroke-background: linear-gradient(to bottom right, var(--primary-accent) 0%, var(--secondary-accent) 75.31%);
+  }
+
+  @include focus {
+    outline: none;
+    --stroke-background: linear-gradient(to bottom right, var(--primary-accent) 0%, var(--secondary-accent) 75.31%);
+  }
+
+  &:focus-within {
+    --stroke-background: linear-gradient(to bottom right, var(--primary-accent) 0%, var(--secondary-accent) 75.31%);
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font: 700 26px / 29px $ff-roboto-condensed;
+
+    @include vp-767 {
+      font: 700 22px / 24px $ff-roboto-condensed;
+    }
+  }
+
+  p {
+    margin: 0;
+    font: 400 16px / 1.5 $ff-roboto-condensed;
+  }
+
+  b {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 14px;
+    align-items: center;
+    margin-bottom: 34px;
+    padding-top: 65px;
+    font: 700 60px / 1.5 $ff-roboto-condensed;
+    color: var(--themed-light);
+
+    @include vp-767 {
+      margin-bottom: 30px;
+      padding-top: 53px;
+      font: 700 48px / 1.5 $ff-roboto-condensed;
+    }
+
+    &::before {
+      content: attr(data-price);
+      position: absolute;
+      z-index: -1;
+      bottom: -4px;
+      left: -19px;
+      font: 700 100px / 1.5 $ff-roboto-condensed;
+      color: var(--price-shadow);
+
+      @include vp-767 {
+        padding-left: 7px;
+        font: 700 80px / 1.5 $ff-roboto-condensed;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background: url('../img/stack.svg#icon-ruble') no-repeat transparent;
+      width: 30px;
+      height: 42px;
+
+      @include vp-767 {
+        width: 24px;
+        height: 33px;
+      }
+    }
+  }
+
+  a {
+    --background: transparent;
+    --border-color: var(--themed-dark);
+    --text-color: var(--themed-dark);
+    --primary-accent: var(--base-bright);
+    --secondary-accent: #003eb7;
+
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: auto;
+    padding: 24px;
+    font: 700 12px / 14px $ff-roboto-condensed;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: var(--background);
+    }
+
+    @include hover {
+      --background: linear-gradient(97.05deg, var(--primary-accent) 17.6%, var(--secondary-accent) 95.31%);
+      --border-color: transparent;
+      --text-color: var(--base-light);
+    }
+
+    @include focus {
+      outline: none;
+      --background: linear-gradient(97.05deg, var(--primary-accent) 17.6%, var(--secondary-accent) 95.31%);
+      --border-color: var(--themed-dark);
+      --text-color: var(--base-light);
+    }
+  }
+}

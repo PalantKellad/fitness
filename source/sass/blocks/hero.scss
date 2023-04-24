@@ -1,5 +1,5 @@
 .hero {
-  --bg-gradient: conic-gradient(from 131.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg) no-repeat;
+  --bg-gradient: conic-gradient(from 131.87deg at 16.03% 39.06%, var(--secondary-accent) -46.69deg, var(--primary-accent) 32.24deg, var(--secondary-accent) 313.31deg, var(--primary-accent) 392.24deg) no-repeat;
 
   min-height: 658px;
   padding-block: 30px;
