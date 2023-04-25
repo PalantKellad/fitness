@@ -61,17 +61,21 @@
           </div>
           <div class="about__image">
             <picture>
-              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/about/gym-big.webp 1x, ./img/about/gym-big@2x.webp 2x" width="660" height="401">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/about/gym-medium.webp 1x, ./img/about/gym-medium@2x.webp 2x" width="678" height="345">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="640" height="626">
               <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
             </picture>
           </div>
-          <div class="about__video video" style="
-              --video-cover-big:url(../img/video/video-cover-big.webp);
-              --video-cover-medium:url(../img/video/video-cover-medium.webp);
-              --video-cover-small:url(../img/video/video-cover-small.webp);
-            ">
+          <div class="about__video video" data-video>
+            <a class="video__link" href="https://youtu.be/9TZXsZItgdw">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="./img/video/video-cover-big.webp 1x, ./img/video/video-cover-big@2x.webp 2x" width="364" height="228">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-cover-medium.webp 1x, ./img/video/video-cover-medium@2x.webp 2x" width="226" height="167">
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-cover-small.webp 1x, ./img/video/video-cover-small@2x.webp 2x" width="320" height="167">
+                <img src="./img/video/video-cover-big.webp" alt="Видео-обзор тренажёрного зала." width="364" height="228" >
+              </picture>
+            </a>
             <button class="video__button" type="button">Включить видео</button>
           </div>
         </div>
@@ -115,80 +119,105 @@
             class="tabs__panel"
             id="panel-1"
             role="tabpanel"
-            tabindex="0"
             aria-labelledby="tab-1">
-              <ul class="tabs__content feature-list">
-                <li class="feature-list__item">
+              <ul class="tabs__content feature-list" >
+                <li class="feature-list__item" tabindex="0">
                   <h3>С&nbsp;тренером</h3>
                   <p>12&nbsp;занятий</p>
-                  <b>5000 <span>₽</span></b>
+                  <b data-price="5000">5000</b>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="feature-list__item">
+                <li class="feature-list__item" tabindex="0">
                   <h3>Дневной</h3>
                   <p>с&nbsp;8:00 до&nbsp;17:00</p>
-                  <b>1700 <span>₽</span></b>
+                  <b data-price="1700">1700</b>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="feature-list__item">
+                <li class="feature-list__item" tabindex="0">
                   <h3>Полный день</h3>
                   <p>с&nbsp;8:00 до&nbsp;22:00</p>
-                  <b>2700 <span>₽</span></b>
+                  <b data-price="2700">2700</b>
                   <a href="#">Купить абонемент</a>
                 </li>
               </ul>
           </div>
           <div
+            class="tabs__panel"
             id="panel-2"
             role="tabpanel"
-            tabindex="0"
             aria-labelledby="tab-2">
-              <ul class="tabs__content feature-list">
+              <ul class="tabs__content feature-list" tabindex="0">
                 <li class="feature-list__item">
                   <h3>С&nbsp;тренером</h3>
                   <p>12&nbsp;занятий</p>
-                  <b>28000 <span>₽</span></b>
+                  <b data-price="28000">28000</b>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="feature-list__item">
+                <li class="feature-list__item" tabindex="0">
                   <h3>Дневной</h3>
                   <p>с&nbsp;8:00 до&nbsp;17:00</p>
-                  <b>1600 <span>₽</span></b>
+                  <b data-price="1600">1600</b>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="feature-list__item">
+                <li class="feature-list__item" tabindex="0">
                   <h3>Полный день</h3>
                   <p>с&nbsp;8:00 до&nbsp;22:00</p>
-                  <b>2600 <span>₽</span></b>
+                  <b data-price="2600">2600</b>
                   <a href="#">Купить абонемент</a>
                 </li>
               </ul>
           </div>
           <div
+            class="tabs__panel"
             id="panel-3"
             role="tabpanel"
-            tabindex="0"
             aria-labelledby="tab-3">
-              <ul class="tabs__content feature-list">
+              <ul class="tabs__content feature-list" tabindex="0">
                 <li class="feature-list__item">
                   <h3>С&nbsp;тренером</h3>
                   <p>12&nbsp;занятий</p>
-                  <b>50000 <span>₽</span></b>
+                  <b data-price="50000">50000</b>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="feature-list__item">
+                <li class="feature-list__item" tabindex="0">
                   <h3>Дневной</h3>
                   <p>с&nbsp;8:00 до&nbsp;17:00</p>
-                  <b>1500 <span>₽</span></b>
+                  <b data-price="1500">1500</b>
                   <a href="#">Купить абонемент</a>
                 </li>
-                <li class="feature-list__item">
+                <li class="feature-list__item" tabindex="0">
                   <h3>Полный день</h3>
                   <p>с&nbsp;8:00 до&nbsp;22:00</p>
-                  <b>2500 <span>₽</span></b>
+                  <b data-price="2500">2500</b>
                   <a href="#">Купить абонемент</a>
                 </li>
               </ul>
+          </div>
+        </div>
+      </section>
+      <section class="promo">
+        <div class="container">
+          <div class="promo__content promo-card">
+            <div class="promo-card__description">
+              <h2>Super Games</h2>
+              <dl>
+                <div class="promo-card__timing">
+                  <dt>Дата</dt>
+                  <dd>
+                    <time><span class="promo-card__day">7</span> марта 2019</time>
+                  </dd>
+                </div>
+                <div class="promo-card__time">
+                  <dt>Время</dt>
+                  <dd>
+                    <time><span class="promo-card__time">12:00</span></time>
+                  </dd>
+                </div>
+              </dl>
+              <a class="promo-card__link" href="#">Заполнить заявку</a>
+            </div>
+            <div class="promo-card__decoration">
+            </div>
           </div>
         </div>
       </section>
