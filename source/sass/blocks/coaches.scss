@@ -1,0 +1,17 @@
+.coaches {
+  padding-block: 46px 170px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font: 600 54px / 65px $ff-alumni-sans;
+    letter-spacing: 0.03em;
+  }
+}
+
+.coaches__slider {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 28px;
+  gap: 40px
+}

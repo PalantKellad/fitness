@@ -19,7 +19,7 @@
     bottom: -96px;
     width: 321px;
     height: 384px;
-    background: url('../img/plates-big.webp') no-repeat;
+    background: url("../img/plates-big.webp") no-repeat;
     transform: rotate(150deg);
 
     @include vp-767 {

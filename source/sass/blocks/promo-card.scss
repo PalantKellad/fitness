@@ -1,17 +1,163 @@
 .promo-card {
   display: flex;
 
-  h2 {
-    margin: 0;
-    font: 600 82px / 79px $ff-alumni-sans;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--base-light);
+  @include vp-767 {
+    flex-direction: column;
   }
 }
 
 .promo-card__description {
-  padding: 85px;
+  display: grid;
+  grid-template-areas:
+    "title date"
+    "subtitle subtitle"
+    "button button";
+  grid-template-columns: 51% 48%;
+  gap: 10px;
+  max-width: 500px;
+  padding: 81px 85px 84px 77px;
   background-color: var(--base-bright);
+  color: var(--base-light);
+
+  @include vp-1200 {
+    row-gap: 5px;
+    padding: 47px 54px 51px 44px;
+    max-width: 292px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+
+  h2 {
+    grid-area: title;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-top: 3px;
+    padding-left: 14px;
+    font: 600 82px / 79px $ff-alumni-sans;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include vp-1200 {
+      margin-bottom: 5px;
+      padding-left: 7px;
+      font: 600 48px / 46px $ff-alumni-sans;
+      text-align: left;
+    }
+  }
+
+  dl {
+    grid-area: date;
+    justify-self: end;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    grid-area: subtitle;
+    margin: 0;
+    margin-bottom: 35px;
+    font: 400 18px / 1.5 $ff-roboto-condensed;
+
+    @include vp-1200 {
+      margin-bottom: 24px;
+      padding-right: 13px;
+      font: 400 12px / 1.5 $ff-roboto-condensed;
+      text-align: center;
+    }
+  }
+
+  a {
+    grid-area: button;
+    display: block;
+    padding: 25px;
+    font: 700 12px / 14px $ff-roboto-condensed;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: inherit;
+    border: 4px solid var(--base-light);
+
+    @include vp-1200 {
+      padding: 12px;
+      font: 700 10px / 12px $ff-roboto-condensed;
+      border: 2px solid var(--base-light);
+    }
+  }
+}
+
+.promo-card__timing {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  color: var(--base-light);
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @include vp-1200 {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  dt {
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+    font: 400 18px / 1.5 $ff-roboto-condensed;
+
+    @include vp-1200 {
+      margin-bottom: 1px;
+      font: 400 12px / 1.5 $ff-roboto-condensed;
+    }
+  }
+
+  dd {
+    border-top: 1px solid var(--base-light);
+    margin: 0;
+    padding: 0;
+  }
+
+  time {
+    display: flex;
+    column-gap: 0.15em;
+    font: 700 40px / 1.2 $ff-roboto-condensed;
+
+    @include vp-1200 {
+      font: 700 24px / 1.2 $ff-roboto-condensed;
+    }
+  }
+}
+
+.promo-card__date {
+  padding-top: 6px;
+  font: 400 14px / 1.3 $ff-roboto-condensed;
+
+  @include vp-1200 {
+    padding-top: 1px;
+    font: 400 10px / 1.3 $ff-roboto-condensed;
+  }
+}
+
+.promo-card__decoration {
+  --bg-url: var(--promo-bg-url-big);
+
+  flex: 1 1 0;
+  background: var(--bg-url) no-repeat center;
+  background-color: var(--base-quiet);
+
+  @include vp-1200 {
+    --bg-url: var(--promo-bg-url-medium);
+  }
+
+  @include vp-767 {
+    --bg-url: var(--promo-bg-url-small);
+
+    min-height: 292px;
+    background-size: cover;
+  }
 }

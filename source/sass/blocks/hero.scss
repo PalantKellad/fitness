@@ -68,7 +68,7 @@
   padding-right: 60.6%;
   color: var(--base-light);
 
-  @include vp-1200{
+  @include vp-1200 {
     --bg-image: var(--header-bg-medium-url);
 
     padding-top: 68px;
