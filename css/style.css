@@ -1255,11 +1255,14 @@ button.swiper-pagination-bullet {
   --themed-light: #103aae;
   --themed-neutral: #1c3374;
   --themed-dark: #102654;
+  --themed-dark-89: rgba(16, 38, 84, 0.89);
   --themed-bright: #d10a42;
+  --themed-quiet: #5e6675;
   --base-light: #ffffff;
   --base-neutral: #f8f9fc;
   --base-dark: #030a1a;
   --base-bright: #ed0233;
+  --base-quiet: #020246;
   --primary-accent: #003d85;
   --secondary-accent: #b80027;
   --price-shadow: #e8e8e8;
@@ -2065,7 +2068,7 @@ button,
 }
 
 .promo {
-  padding-block: 120px;
+  padding-block: 120px 60px;
 }
 
 .promo-card {
@@ -2074,18 +2077,235 @@ button,
   display: flex;
 }
 
-.promo-card h2 {
+.promo-card__description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 10px auto 10px auto;
+  grid-template-areas: "title date" "subtitle subtitle" "button button";
+  -ms-grid-columns: 51% 10px 48%;
+  grid-template-columns: 51% 48%;
+  gap: 10px;
+  max-width: 500px;
+  padding: 81px 85px 84px 77px;
+  background-color: var(--base-bright);
+  color: var(--base-light);
+}
+
+.promo-card__description h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
   margin: 0;
+  margin-bottom: 20px;
+  padding-top: 3px;
+  padding-left: 14px;
   font: 600 82px/79px "Alumni Sans", "Arial", sans-serif;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+}
+
+.promo-card__description dl {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: date;
+  -ms-grid-column-align: end;
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-card__description p {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: subtitle;
+  margin: 0;
+  margin-bottom: 35px;
+  font: 400 18px/1.5 "Roboto Condensed", "Arial", sans-serif;
+}
+
+.promo-card__description a {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: button;
+  display: block;
+  padding: 25px;
+  font: 700 12px/14px "Roboto Condensed", "Arial", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+  border: 4px solid var(--base-light);
+}
+
+.promo-card__timing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: var(--base-light);
 }
 
-.promo-card__description {
-  padding: 85px;
-  background-color: var(--base-bright);
+.promo-card__timing:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.promo-card__timing dt {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+  font: 400 18px/1.5 "Roboto Condensed", "Arial", sans-serif;
+}
+
+.promo-card__timing dd {
+  border-top: 1px solid var(--base-light);
+  margin: 0;
+  padding: 0;
+}
+
+.promo-card__timing time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.15em;
+  -moz-column-gap: 0.15em;
+  column-gap: 0.15em;
+  font: 700 40px/1.2 "Roboto Condensed", "Arial", sans-serif;
+}
+
+.promo-card__date {
+  padding-top: 6px;
+  font: 400 14px/1.3 "Roboto Condensed", "Arial", sans-serif;
+}
+
+.promo-card__decoration {
+  --bg-url: var(--promo-bg-url-big);
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  background: var(--bg-url) no-repeat center;
+  background-color: var(--base-quiet);
+}
+
+.coaches {
+  padding-block: 46px 170px;
+}
+
+.coaches h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font: 600 54px/65px "Alumni Sans", "Arial", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.coaches__slider {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 28px;
+  gap: 40px;
+}
+
+.person-card {
+  --content-transform: translateY(65.5%);
+  --content-opacity: 0;
+  --content-bg-color: transparent;
+  --overflow-y: clip;
+  --height: 295px;
+  position: relative;
+  aspect-ratio: 260/294;
+  background-color: var(--themed-quiet);
+  overflow: hidden;
+  -webkit-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+.person-card.focus-visible:focus {
+  --content-transform: translateY(0%);
+  --content-opacity: 1;
+  --content-bg-color: var(--themed-dark-89);
+  --overflow-y: auto;
+}
+
+.person-card__image {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 260/294;
+}
+
+.person-card__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.person-card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: var(--height);
+  min-width: 0;
+  padding: 54px 18px 35px;
+  aspect-ratio: 260/294;
+  overflow-y: var(--overflow-y);
+  color: var(--base-light);
+  background-color: var(--content-bg-color);
+  -webkit-transform: var(--content-transform);
+  -ms-transform: var(--content-transform);
+  transform: var(--content-transform);
+  -webkit-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  scrollbar-gutter: stable both-edges;
+}
+
+.person-card__content h3 {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0;
+  font: 700 18px/1.3 "Roboto Condensed", "Arial", sans-serif;
+  text-align: center;
+}
+
+.person-card__content p {
+  margin: 0;
+  text-align: center;
+  opacity: var(--content-opacity);
+}
+
+.person-card__content ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 31px;
+  padding-left: 46px;
+  font: 400 14px/1.5 "Roboto Condensed", "Arial", sans-serif;
+}
+
+.person-card__content li {
+  margin: 0;
+  padding-bottom: 13px;
 }
 
 @media (min-width: 768px) {
@@ -2270,6 +2490,64 @@ button,
 
   .feature-list__item {
     padding-inline: 110px;
+  }
+
+  .promo {
+    padding-block: 100px;
+  }
+
+  .promo-card__description {
+    row-gap: 5px;
+    padding: 47px 54px 51px 44px;
+    max-width: 292px;
+  }
+
+  .promo-card__description h2 {
+    margin-bottom: 5px;
+    padding-left: 7px;
+    font: 600 48px/46px "Alumni Sans", "Arial", sans-serif;
+    text-align: left;
+  }
+
+  .promo-card__description p {
+    margin-bottom: 24px;
+    padding-right: 13px;
+    font: 400 12px/1.5 "Roboto Condensed", "Arial", sans-serif;
+    text-align: center;
+  }
+
+  .promo-card__description a {
+    padding: 12px;
+    font: 700 10px/12px "Roboto Condensed", "Arial", sans-serif;
+    border: 2px solid var(--base-light);
+  }
+
+  .promo-card__timing:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  .promo-card__timing dt {
+    margin-bottom: 1px;
+    font: 400 12px/1.5 "Roboto Condensed", "Arial", sans-serif;
+  }
+
+  .promo-card__timing time {
+    font: 700 24px/1.2 "Roboto Condensed", "Arial", sans-serif;
+  }
+
+  .promo-card__date {
+    padding-top: 1px;
+    font: 400 10px/1.3 "Roboto Condensed", "Arial", sans-serif;
+  }
+
+  .promo-card__decoration {
+    --bg-url: var(--promo-bg-url-medium);
+  }
+}
+
+@media (max-width: 1023px) {
+  .person-card__image {
+    aspect-ratio: 309/386;
   }
 }
 
@@ -2456,6 +2734,31 @@ button,
     width: 24px;
     height: 33px;
   }
+
+  .promo {
+    padding-block: 70px;
+  }
+
+  .promo-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .promo-card__description {
+    max-width: 100%;
+  }
+
+  .promo-card__decoration {
+    --bg-url: var(--promo-bg-url-small);
+    min-height: 292px;
+    background-size: cover;
+  }
+
+  .person-card__image {
+    aspect-ratio: 270/386;
+  }
 }
 
 @media (hover: hover) {
@@ -2467,5 +2770,13 @@ button,
     --background: linear-gradient(97.05deg, var(--primary-accent) 17.6%, var(--secondary-accent) 95.31%);
     --border-color: transparent;
     --text-color: var(--base-light);
+  }
+
+  .person-card:hover:not(.focus-visible) {
+    --content-transform: translateY(0%);
+    --content-opacity: 1;
+    --content-bg-color: var(--themed-dark-89);
+    --overflow-y: auto;
+    --height: auto;
   }
 }
