@@ -5,9 +5,7 @@
   --overflow-y: clip;
   --height: 295px;
 
-  display: grid;
-  grid-template-columns: minmax(1fr, 260px);
-  grid-template-rows: minmax(0, 294px);
+  position: relative;
   aspect-ratio: 260 / 294;
   background-color: var(--themed-quiet);
   overflow: hidden;
@@ -30,8 +28,11 @@
 }
 
 .person-card__image {
-  grid-column: 1 / 1;
-  grid-row: 1 / 1;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: auto;
   aspect-ratio: 260 / 294;
 
   img {
@@ -50,22 +51,22 @@
 }
 
 .person-card__content {
-  position: relative;
-  grid-column: 1 / 1;
-  grid-row: 1 / 1;
+  position: absolute;
+  inset: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: var(--height);
   min-width: 0;
-  padding: 54px 25px 35px;
+  padding: 54px 18px 35px;
   aspect-ratio: 260 / 294;
   overflow-y: var(--overflow-y);
   color: var(--base-light);
   background-color: var(--content-bg-color);
   transform: var(--content-transform);
   transition: 300ms ease-out;
+  scrollbar-gutter: stable both-edges;
 
   h3 {
     flex-shrink: 0;

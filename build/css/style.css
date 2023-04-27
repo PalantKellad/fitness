@@ -2614,12 +2614,7 @@ button,
   --content-bg-color: transparent;
   --overflow-y: clip;
   --height: 295px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: minmax(1fr, 260px);
-  grid-template-columns: minmax(1fr, 260px);
-  -ms-grid-rows: minmax(0, 294px);
-  grid-template-rows: minmax(0, 294px);
+  position: relative;
   aspect-ratio: 260/294;
   background-color: var(--themed-quiet);
   overflow: hidden;
@@ -2644,10 +2639,11 @@ button,
 }
 
 .person-card__image {
-  -ms-grid-column: 1;
-  grid-column: 1/1;
-  -ms-grid-row: 1;
-  grid-row: 1/1;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: auto;
   aspect-ratio: 260/294;
 }
 .person-card__image img {
@@ -2668,11 +2664,8 @@ button,
 }
 
 .person-card__content {
-  position: relative;
-  -ms-grid-column: 1;
-  grid-column: 1/1;
-  -ms-grid-row: 1;
-  grid-row: 1/1;
+  position: absolute;
+  inset: 0;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2684,7 +2677,7 @@ button,
   width: 100%;
   height: var(--height);
   min-width: 0;
-  padding: 54px 25px 35px;
+  padding: 54px 18px 35px;
   aspect-ratio: 260/294;
   overflow-y: var(--overflow-y);
   color: var(--base-light);
@@ -2695,6 +2688,7 @@ button,
   -webkit-transition: 300ms ease-out;
   -o-transition: 300ms ease-out;
   transition: 300ms ease-out;
+  scrollbar-gutter: stable both-edges;
 }
 .person-card__content h3 {
   -ms-flex-negative: 0;

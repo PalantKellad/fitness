@@ -115,6 +115,5 @@ class TabsAutomatic {
   }
 }
 
-// Initialize tablist
 
 export {TabsAutomatic};
