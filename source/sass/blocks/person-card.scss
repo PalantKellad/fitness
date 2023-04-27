@@ -1,10 +1,8 @@
 .person-card {
   --content-transform: translateY(65.5%);
-  --content-opacity: 0;
   --content-bg-color: transparent;
   --overflow-y: hidden;
   --height: 295px;
-  --content-position: static;
   --content-display: contents;
   --description-display: none;
 
@@ -23,7 +21,6 @@
     --content-bg-color: var(--themed-dark-89);
     --overflow-y: auto;
     --height: auto;
-    --content-position: absolute;
     --content-display: flex;
     --description-display: block;
   }
@@ -90,7 +87,6 @@
     display: var(--description-display);
     margin: 0;
     text-align: center;
-    opacity: var(--content-opacity);
   }
 
   ul {
