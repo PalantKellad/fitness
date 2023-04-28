@@ -2,7 +2,6 @@
   --content-transform: translateY(65.5%);
   --content-bg-color: transparent;
   --overflow-y: hidden;
-  --height: 295px;
   --content-display: contents;
   --description-display: none;
 
@@ -10,10 +9,22 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  aspect-ratio: 260 / 294;
+  width: 260px;
+  height: 294px;
   padding: 20px 20px 24px;
   overflow: hidden;
   transition: 300ms ease-out;
+
+  @include vp-1200 {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 268 / 294;
+  }
+
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
 
   @include hover {
     --content-transform: translateY(0%);
@@ -48,12 +59,16 @@
     height: 100%;
   }
 
-  @include vp-1023 {
-    aspect-ratio: 309 / 386;
+  @include vp-1200 {
+    aspect-ratio: 268 / 294;
   }
 
   @include vp-767 {
     aspect-ratio: 270 / 386;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
   }
 }
 
@@ -64,16 +79,18 @@
   display: var(--content-display);
   flex-direction: column;
   width: 100%;
-  height: var(--height);
   min-width: 0;
-  padding: 54px 18px 35px;
-  aspect-ratio: 260 / 294;
+  padding: 54px 25px 35px;
   overflow-y: var(--overflow-y);
   color: var(--base-light);
   background-color: var(--content-bg-color);
   transform: var(--content-transform);
   transition: 300ms ease-out;
   scrollbar-gutter: stable both-edges;
+
+  @include vp-767 {
+    padding: 44px 14px 35px;
+  }
 
   h3 {
     width: 100%;
@@ -96,10 +113,19 @@
     padding-top: 31px;
     padding-left: 46px;
     font: 400 14px / 1.5 $ff-roboto-condensed;
+
+    @include vp-767 {
+      padding-left: 36px;
+    }
   }
 
   li {
     margin: 0;
     padding-bottom: 13px;
+  }
+
+  li::marker {
+    font-size: 1.2em;
+    line-height: 0;
   }
 }

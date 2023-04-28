@@ -195,43 +195,40 @@
           </div>
         </div>
       </section>
-      <section class="promo">
-        <div class="container">
-          <div class="promo-card">
-            <div class="promo-card__description">
-              <h2>Super Games</h2>
-              <dl>
-                <div class="promo-card__timing">
-                  <dt>Дата</dt>
-                  <dd>
-                    <time>7 <span class="promo-card__date">Марта<br>2019</span></time>
-                  </dd>
-                </div>
-                <div class="promo-card__timing">
-                  <dt>Время</dt>
-                  <dd>
-                    <time>12:00</time>
-                  </dd>
-                </div>
-              </dl>
-              <p>Ежегодные соревнования по&nbsp;CrossFit</p>
-              <a href="#">Заполнить заявку</a>
-            </div>
-            <div class="promo-card__decoration" style="
-              --promo-bg-url-big: url(../img/promo/promo-big.webp);
-              --promo-bg-url-medium: url(../img/promo/promo-medium.webp);
-              --promo-bg-url-small: url(../img/promo/promo-small.webp);
-            ">
-            </div>
+      <section class="promo container">
+        <div class="promo-card">
+          <div class="promo-card__description">
+            <h2>Super Games</h2>
+            <dl>
+              <div class="promo-card__timing">
+                <dt>Дата</dt>
+                <dd>
+                  <time>7 <span class="promo-card__date">Марта<br>2019</span></time>
+                </dd>
+              </div>
+              <div class="promo-card__timing">
+                <dt>Время</dt>
+                <dd>
+                  <time>12:00</time>
+                </dd>
+              </div>
+            </dl>
+            <p>Ежегодные соревнования по&nbsp;CrossFit</p>
+            <a href="#">Заполнить заявку</a>
+          </div>
+          <div class="promo-card__decoration" style="
+            --promo-bg-url-big: url(../img/promo/promo-big.webp);
+            --promo-bg-url-medium: url(../img/promo/promo-medium.webp);
+            --promo-bg-url-small: url(../img/promo/promo-small.webp);
+          ">
           </div>
         </div>
       </section>
-      <section class="coaches">
-        <div class="container">
+      <section class="coaches container">
           <h2>Тренеры</h2>
-          <div class="coaches__slider swiper">
-            <div class="slider swiper-wrapper">
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+          <div class="swiper">
+            <div class="coaches__cards swiper-wrapper">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Анна Павлова</h3>
                   <p>Тяжелобалетика</p>
@@ -251,7 +248,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Алексей Лавров</h3>
                   <p>Cybersport</p>
@@ -270,7 +267,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Александр Пашков</h3>
                   <p>CrossFit</p>
@@ -289,7 +286,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Мария Кетова</h3>
                   <p>Oncorhynchus keta</p>
@@ -308,7 +305,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3><del>Робауте</del> <del>Робуте</del> <ins>Робаут</ins> <del>Гил</del> <ins>Жиллиман</ins></h3>
                   <p>Король Битвы, Мстящий Сын, Герой</p>
@@ -327,7 +324,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Магнус Красный</h3>
                   <p>Не предавал</p>
@@ -346,7 +343,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Леман Русс</h3>
                   <p>Человек и танк</p>
@@ -365,7 +362,7 @@
                   </picture>
                 </div>
               </article>
-              <article class="slider__item person-card swiper-slide" tabindex="0">
+              <article class="person-card swiper-slide" tabindex="0">
                 <div class="person-card__content">
                   <h3>Фулгрим</h3>
                   <p>Та ещё змея</p>
@@ -385,10 +382,9 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
-        </div>
+          <button class="coaches__slider-button coaches__slider-button--prev"></button>
+          <button class="coaches__slider-button coaches__slider-button--next"></button>
       </section>
     </main>
     <footer class="page__footer"></footer>
