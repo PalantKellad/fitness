@@ -1,7 +1,7 @@
 import './vendor/focus-visible-polyfill';
 import Swiper from './vendor/swiper';
 
-const slider = new Swiper('.swiper', {
+const coachesSlider = new Swiper('.swiper', {
   loop: true,
   slideClass: 'person-card',
   navigation: {
@@ -35,3 +35,22 @@ const slider = new Swiper('.swiper', {
     },
   },
 });
+
+const reviewsSlider = new Swiper('.swiper', {
+  loop: false,
+  slideClass: 'review-slider__item',
+  navigation: {
+    nextEl: '.review-slider__button--next',
+    prevEl: '.review-slider__button--prev',
+  },
+
+  a11y: {
+    enabled: true,
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
+  slidesPerView: 1,
+});
+
+coachesSlider.init();
+reviewsSlider.init();

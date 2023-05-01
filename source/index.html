@@ -387,7 +387,7 @@
           <button class="coaches__slider-button coaches__slider-button--next"></button>
       </section>
       <section class="advantages">
-        <div class="container">
+        <div class="container container--full-mobile">
           <h2>Наши преимущества</h2>
           <div class="advantages__list-wrapper">
             <dl>
@@ -398,18 +398,18 @@
                   <p>Занимайтесь без очередей и&nbsp;толпучки</p>
                 </dd>
               </div>
-              <div class="advantages__item advantages__item--featured">
-                <dt>Оборудование</dt>
-                <dd>
-                  <b>100 <span>Тренажёров</span></b>
-                  <p>Современные тренажеры на&nbsp;все группы мышц</p>
-                </dd>
-              </div>
               <div class="advantages__item">
                 <dt>Собственная парковка</dt>
                 <dd>
                   <b>70 <span>машин</span></b>
                   <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
+                </dd>
+              </div>
+              <div class="advantages__item advantages__item--featured">
+                <dt>Оборудование</dt>
+                <dd>
+                  <b>100 <span>Тренажёров</span></b>
+                  <p>Современные тренажеры на&nbsp;все группы мышц</p>
                 </dd>
               </div>
               <div class="advantages__item">
@@ -429,7 +429,82 @@
             </dl>
           </div>
         </div>
-
+      </section>
+      <section class="offers" style="
+          --offers-bg-big-url: url(../img/offers/offers-big.webp);
+          --offers-bg-medium-url: url(../img/offers/offers-medium.webp);
+          --offers-bg-small-url: url(../img/offers/offers-small.webp);
+          --offers-retina-bg-big-url: url(../img/offers/offers-big@2x.webp);
+          --offers-retina-bg-medium-url: url(../img/offers/offers-medium@2x.webp);
+          --offers-retina-bg-small-url: url(../img/offers/offers-small@2x.webp);
+          ">
+        <div class="container">
+          <h2>Акции</h2>
+          <div class="offers__wrapper">
+            <div class="offers__main-offer offer offer--main">
+              <h3>Год</h3>
+              <b>4999</b>
+              <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
+              <a href="#">Подробрее</a>
+            </div>
+            <div class="offers__additional-offers">
+              <div class="offer">
+                <h3>Месяц бесплатно</h3>
+                <p>Приведи&nbsp;друга, получи абонемент&nbsp;в&nbsp;подарок</p>
+                <a href="#">Подробнее</a>
+              </div>
+              <div class="offer">
+                <h3>Скидка 20%</h3>
+                <p>Корпоративный фитнес с&nbsp;командой</p>
+                <a href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <h2>Отзывы</h2>
+          <div class="review-slider swiper">
+            <ul class="review-slider__wrapper swiper-wrapper">
+              <li class="review-slider__item">
+                <h3>Анна Орлова</h3>
+                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                <div class="review-slider__image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/reviews/anna-orlova-big.webp 1x, ./img/reviews/anna-orlova-big@2x.webp 2x" width="80" height="80">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/reviews/anna-orlova-small.webp 1x, ./img/reviews/anna-orlova-small@2x.webp 2x" width="68" height="68">
+                    <img src="./img/reviews/anna-orlova-big.webp" width="80" height="80" alt="Фото Анны Орловой.">
+                  </picture>
+                </div>
+              </li>
+              <li class="review-slider__item">
+                <h3>Юрий Каменев</h3>
+                <p>Мне нравится, что в&nbsp;клубе занимаются только натуральные спортсмены. Никакого допинга. Ни&nbsp;капли. Я&nbsp;сам накачался. Без протеина!</p>
+                <div class="review-slider__image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/reviews/ronni-coleman-big.webp 1x, ./img/reviews/ronni-coleman-big@2x.webp 2x" width="80" height="80">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/reviews/ronni-coleman-small.webp 1x, ./img/reviews/ronni-coleman-small@2x.webp 2x" width="68" height="68">
+                    <img src="./img/reviews/ronni-coleman-big.webp" width="80" height="80" alt="Фото Юрия Каменев.">
+                  </picture>
+                </div>
+              </li>
+              <li class="review-slider__item">
+                <h3>Евлампия Тестостеронова</h3>
+                <p>Люблю женские соревнование по&nbsp;тяжёлой атлетике, которые проводят в&nbsp;клубе. Принимаю участие каждый год, и&nbsp;каждый год удаётся побеждать!</p>
+                <div class="review-slider__image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="./img/reviews/kai-greene-big.webp 1x, ./img/reviews/kai-greene-big@2x.webp 2x" width="80" height="80">
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/reviews/kai-greene-small.webp 1x, ./img/reviews/kai-greene-small@2x.webp 2x" width="68" height="68">
+                    <img src="./img/reviews/kai-greene-big.webp" width="80" height="80" alt="Фото Анны Орловой.">
+                  </picture>
+                </div>
+              </li>
+            </ul>
+            <button class="review-slider__button review-slider__button--prev"></button>
+            <button class="review-slider__button review-slider__button--next"></button>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="page__footer"></footer>

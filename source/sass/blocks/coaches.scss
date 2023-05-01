@@ -3,11 +3,11 @@
   padding-block: 46px 120px;
 
   @include vp-1200 {
-    padding: 20px 101px 120px;
+    padding: 20px 101px 100px;
   }
 
   @include vp-767 {
-    padding: 24px 47px 120px;
+    padding: 24px 47px 70px;
   }
 
   h2 {
@@ -36,7 +36,7 @@
 .coaches__slider-button {
   --size: 23px;
   --x-offset: -32px;
-  --y-offset: 47.2%;
+  --y-offset: 51.2%;
   --color: #afafaf;
 
   position: absolute;
