@@ -1,0 +1,109 @@
+.training-request {
+  min-height: 337px;
+  padding-top: 56px;
+  padding-right: 170px;
+
+  @include vp-1200 {
+    min-height: initial;
+    padding: 62px 116px 108px 87px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-inline: 0;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 19px;
+    font: 800 54px / 1.56 $ff-alumni-sans;
+    letter-spacing: 0.03em;
+
+    @include vp-1200 {
+      margin-bottom: 34px;
+      font: 700 42px / 50px $ff-alumni-sans;
+      letter-spacing: 0.03em;
+    }
+
+    @include vp-767 {
+      font: 600 32px / 38px $ff-alumni-sans;
+    }
+  }
+}
+
+.training-request__form-wrapper {
+  --border-color: #74819c;
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 29px;
+
+    @include vp-1200 {
+      column-gap: 55px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+  }
+
+  label {
+    --label-font-size: 0;
+    --label-transform: translateY(1.5em);
+
+    position: relative;
+    width: 100%;
+    align-self: end;
+
+    &:focus-within {
+      --label-font-size: 16px;
+      --label-transform: translateY(-1.3em);
+    }
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    font-size: var(--label-font-size);
+    background-color: var(--themed-dark);
+    transform: var(--label-transform);
+    transition: transform 300ms ease-out;
+  }
+
+  input {
+    width: 100%;
+    padding-bottom: 3px;
+    font: 400 16px / 16px $ff-roboto-condensed;
+    color: var(--base-light);
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    background-color: transparent;
+
+    &::placeholder {
+      font: 400 14px / 16px $ff-roboto-condensed;
+      color: var(--base-light);
+    }
+
+    @include vp-767 {
+      padding-bottom: 6px;
+    }
+  }
+
+  button {
+    grid-column: span 2;
+    width: 100%;
+    padding: 16px;
+    font: 700 14px / 16px $ff-roboto-condensed;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: inherit;
+    background: transparent;
+    border: 3px solid var(--base-light);
+    cursor: pointer;
+    user-select: none;
+  }
+}

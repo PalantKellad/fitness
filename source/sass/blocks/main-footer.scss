@@ -1,0 +1,46 @@
+.main-footer {
+  --primary-color: var(--themed-dark);
+  --secondary-color: var(--base-light);
+  --border-color: #74819c;
+
+  position: relative;
+  background: linear-gradient(90deg, var(--primary-color) 50%, var(--secondary-color) 50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: var(--border-color);
+
+    @include vp-1200 {
+      display: none;
+    }
+  }
+
+  @include vp-1200 {
+    background: linear-gradient(180deg, var(--primary-color) 50%, var(--secondary-color) 50%);
+  }
+}
+
+.main-footer__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @include vp-1200 {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+.main-footer__section {
+  background-color: var(--secondary-color);
+
+  &--accent {
+    color: var(--base-light);
+    background-color: var(--primary-color);
+  }
+}

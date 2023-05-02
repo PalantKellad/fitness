@@ -18,8 +18,9 @@
   background-color: var(--themed-neutral);
 
   @include vp-767 {
-    grid-template-areas: "image title"
-                         "description description";
+    grid-template-areas:
+      "image title"
+      "description description";
     grid-template-columns: minmax(0, 84px) minmax(0, 1fr);
     column-gap: 11px;
     padding: 33px 28px;

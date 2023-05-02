@@ -13,6 +13,7 @@
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
   <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -383,8 +384,8 @@
               </article>
             </div>
           </div>
-          <button class="coaches__slider-button coaches__slider-button--prev"></button>
-          <button class="coaches__slider-button coaches__slider-button--next"></button>
+          <button class="coaches__slider-button coaches__slider-button--prev" type="button"></button>
+          <button class="coaches__slider-button coaches__slider-button--next" type="button"></button>
       </section>
       <section class="advantages">
         <div class="container container--full-mobile">
@@ -503,11 +504,54 @@
                 </li>
               </ul>
             </div>
-            <button class="reviews__slider-button reviews__slider-button--prev"></button>
-            <button class="reviews__slider-button reviews__slider-button--next"></button>
+            <button class="reviews__slider-button reviews__slider-button--prev" type="button"></button>
+            <button class="reviews__slider-button reviews__slider-button--next" type="button"></button>
           </div>
         </div>
       </section>
+      <div class="main-footer">
+        <div class="main-footer__container container">
+          <section class="main-footer__section main-footer__section--accent training-request">
+            <h2>Бесплатное занятие</h2>
+            <div class="training-request__form-wrapper">
+              <form name="request" action="https://echo.htmlacademy.ru/" method="post">
+                <label>
+                  <span>Ваше имя</span>
+                  <input type="text" name="customer-name" placeholder="Имя" required>
+                </label>
+                <label>
+                  <span>Ваш телефон</span>
+                  <input type="tel" name="customer-phone" placeholder="Телефон" title="Телефон формата +7 (999) 123 45 67" pattern=".{18}" required>
+                </label>
+                <button type="submit">Отправить</button>
+              </form>
+            </div>
+          </section>
+          <section class="main-footer__section contacts">
+            <h2>Контакты</h2>
+            <div class="contacts__wrapper">
+              <div class="contacts__item">
+                <address>
+                  <h3>Адрес:</h3>
+                  <p>г.&nbsp;Омск, ул. 60 лет Октября, 7</p>
+                </address>
+              </div>
+              <div class="contacts__item">
+                <h3>График работы:</h3>
+                <p>Пн&#8209;Вс: с&nbsp;8:00 до&nbsp;22:00</p>
+              </div>
+              <div class="contacts__item">
+                <h3>Телефон:</h3>
+                <a href="tel:88005555555">8-800-555-55-55</a>
+              </div>
+              <div class="contacts__item">
+                <h3>Email:</h3>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
     <footer class="page__footer"></footer>
   </div>

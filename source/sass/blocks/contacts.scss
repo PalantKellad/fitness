@@ -1,0 +1,134 @@
+.contacts {
+  min-height: 337px;
+  padding-top: 49px;
+  padding-left: 121px;
+
+  @include vp-1200 {
+    padding-top: 62px;
+    padding-inline: 88px;
+  }
+
+  @include vp-767 {
+    padding-inline: 0;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 12px;
+    font: 600 54px / 1.56 $ff-alumni-sans;
+    letter-spacing: 0.03em;
+
+    @include vp-1200 {
+      font: 600 42px / 50px $ff-alumni-sans;
+    }
+
+    @include vp-767 {
+      font: 600 32px / 38px $ff-alumni-sans;
+    }
+  }
+
+  @include vp-1200 {
+    min-height: initial;
+  }
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.97fr);
+  grid-template-rows: repeat(2, min-content);
+  column-gap: 116px;
+  padding-top: 17px;
+  overflow: hidden;
+
+  @include vp-1200 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
+    column-gap: 68px;
+    margin-left: -3px;
+    padding-top: 19px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    margin-left: 0;
+    padding-top: 22px;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 4px;
+    font: 700 16px / 1.5 $ff-roboto-condensed;
+    font-style: normal;
+
+    @include vp-1200 {
+      font: 700 20px / 1.5 $ff-roboto-condensed;
+    }
+  }
+
+  p {
+    margin: 0;
+    font: 400 14px / 21px $ff-roboto-condensed;
+    font-style: normal;
+
+    @include vp-1200 {
+      font: 400 18px / 27px $ff-roboto-condensed;
+    }
+  }
+
+  a {
+    font: 400 14px / 21px $ff-roboto-condensed;
+    color: inherit;
+
+    @include vp-1200 {
+      font: 400 18px / 27px $ff-roboto-condensed;
+    }
+  }
+}
+
+.contacts__item {
+  position: relative;
+  padding-left: 3px;
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+
+  &:nth-child(odd) {
+    --top: 6px;
+    order: -1;
+    padding-bottom: 14px;
+
+    @include vp-1200 {
+      padding-bottom: 22px;
+    }
+
+    @include vp-767 {
+      order: initial;
+      padding-bottom: 0;
+    }
+  }
+
+  &:nth-child(even) {
+    --top: -9px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--top);
+    left: -57px;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-color);
+
+    @include vp-1200 {
+      left: -45px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
