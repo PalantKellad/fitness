@@ -40,8 +40,8 @@ const reviewsSlider = new Swiper('.swiper', {
   loop: false,
   slideClass: 'review-slider__item',
   navigation: {
-    nextEl: '.review-slider__button--next',
-    prevEl: '.review-slider__button--prev',
+    nextEl: '.reviews__slider-button--next',
+    prevEl: '.reviews__slider-button--prev',
   },
 
   a11y: {

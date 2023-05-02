@@ -37,7 +37,7 @@
   --size: 23px;
   --x-offset: -32px;
   --y-offset: 51.2%;
-  --color: #afafaf;
+  --color: var(--slider-arrow-color);
 
   position: absolute;
   top: var(--y-offset);
