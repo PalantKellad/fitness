@@ -3347,17 +3347,33 @@ button,
 .contacts__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(0, 1fr) minmax(0, 0.97fr);
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.97fr);
+  -ms-grid-columns: minmax(0, 1fr) 1px minmax(0, 0.97fr);
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 0.97fr);
   -ms-grid-rows: (-webkit-min-content)[2];
   -ms-grid-rows: (min-content)[2];
   grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
-  -webkit-column-gap: 116px;
-     -moz-column-gap: 116px;
-          column-gap: 116px;
+  -webkit-column-gap: 58px;
+     -moz-column-gap: 58px;
+          column-gap: 58px;
   padding-top: 17px;
   overflow: hidden;
+}
+.contacts__wrapper::after {
+  content: "";
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 50;
+  grid-row: 1/span 50;
+  display: block;
+  width: 1px;
+  height: 83%;
+  background-color: var(--border-color);
 }
 @media (max-width: 1199px) {
   .contacts__wrapper {
@@ -3424,12 +3440,16 @@ button,
     padding-left: 0;
   }
 }
+.contacts__item:nth-child(even) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
 .contacts__item:nth-child(odd) {
-  --top: 6px;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
   padding-bottom: 14px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
 }
 @media (max-width: 1199px) {
   .contacts__item:nth-child(odd) {
@@ -3438,33 +3458,7 @@ button,
 }
 @media (max-width: 767px) {
   .contacts__item:nth-child(odd) {
-    -webkit-box-ordinal-group: initial;
-        -ms-flex-order: initial;
-            order: initial;
     padding-bottom: 0;
-  }
-}
-.contacts__item:nth-child(even) {
-  --top: -9px;
-}
-.contacts__item::before {
-  content: "";
-  position: absolute;
-  top: var(--top);
-  left: -57px;
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: var(--border-color);
-}
-@media (max-width: 1199px) {
-  .contacts__item::before {
-    left: -45px;
-  }
-}
-@media (max-width: 767px) {
-  .contacts__item::before {
-    display: none;
   }
 }
 
