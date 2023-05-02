@@ -1,0 +1,25 @@
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 41px 103px 32px;
+  color: var(--base-light);
+  background-color: var(--base-dark);
+}
+
+.page-footer__logo {
+  padding-top: 9px;
+}
+
+.page-footer__menu {
+  max-width: 70%;
+  margin: 0;
+  padding: 0;
+  padding-left: 9px;
+}
+
+.page-footer__social {
+  max-width: 10%;
+  margin: 0;
+  padding: 0;
+}

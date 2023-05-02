@@ -1,0 +1,17 @@
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 20px;
+}
+
+.main-menu__item {
+  &::marker {
+    color: transparent;
+  }
+}
+
+.main-menu__link {
+  font: 400 14px / 16px $ff-roboto-condensed;
+  color: inherit;
+}
