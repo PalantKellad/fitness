@@ -7,6 +7,7 @@
 }
 
 .promo-card__description {
+  flex: 1 1 48%;
   display: grid;
   grid-template-areas:
     "title date"
@@ -20,9 +21,9 @@
   color: var(--base-light);
 
   @include vp-1200 {
+    flex: 1 1 46%;
     row-gap: 5px;
     padding: 47px 54px 51px 44px;
-    max-width: 292px;
   }
 
   @include vp-767 {
@@ -71,6 +72,7 @@
 
   a {
     grid-area: button;
+    align-self: start;
     display: block;
     padding: 25px;
     font: 700 12px / 14px $ff-roboto-condensed;
@@ -146,18 +148,24 @@
 .promo-card__decoration {
   --bg-url: var(--promo-bg-url-big);
 
-  flex: 1 1 0;
-  background: var(--bg-url) no-repeat center;
+  flex: 1 1 52%;
+  background: var(--bg-url) no-repeat bottom;
+  background-size: contain;
   background-color: var(--base-quiet);
 
   @include vp-1200 {
     --bg-url: var(--promo-bg-url-medium);
+
+    flex: 1 1 63%;
+    aspect-ratio: 386 / 292;
   }
 
   @include vp-767 {
     --bg-url: var(--promo-bg-url-small);
 
+    flex: 1 1 100%;
     min-height: 292px;
     background-size: cover;
+    aspect-ratio: 290 / 292;
   }
 }

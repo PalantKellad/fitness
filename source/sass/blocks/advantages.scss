@@ -5,7 +5,7 @@
   --gradient-angle: 161deg;
   --gradient-color-stop: 66%;
 
-  padding-block: 117px 110px;
+  padding-block: 97px 110px;
   background-color: var(--base-neutral);
 
   @include vp-1200 {
@@ -56,7 +56,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: max-content;
     grid-auto-flow: dense;
-    column-gap: 5px;
+    column-gap: 10px;
     row-gap: 148px;
     margin: 0;
 
@@ -85,11 +85,16 @@
   column-gap: 30px;
   grid-auto-rows: min-content;
 
+  @include vp-1200 {
+    grid-template-columns: min-content minmax(0, 1fr);
+  }
+
   @include vp-767 {
     grid-template-areas:
       "feature"
       "title"
       "description";
+    grid-template-columns: initial;
     justify-items: center;
   }
 
@@ -104,7 +109,7 @@
     top: -72px;
     left: -19px;
     display: block;
-    width: 105%;
+    width: 103%;
     height: 2px;
     background-color: var(--themed-bright);
     opacity: 0.2;
@@ -172,6 +177,7 @@
 
     @include vp-767 {
       padding-inline: 46px;
+      text-align: center;
     }
   }
 
@@ -185,7 +191,7 @@
     justify-content: start;
     align-items: center;
     margin: 11px 54px 6px 41px;
-    padding: 46px 14px 20px;
+    padding: 46px 14px 55px;
     text-align: center;
     color: var(--base-neutral);
     background-color: var(--themed-neutral);

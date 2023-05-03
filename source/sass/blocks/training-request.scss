@@ -1,11 +1,11 @@
 .training-request {
   min-height: 337px;
-  padding-top: 56px;
+  padding-block: 56px 69px;
   padding-right: 170px;
 
   @include vp-1200 {
     min-height: initial;
-    padding-block: 62px 71px;
+    padding-block: 62px 72px;
     padding-inline: 133px 162px;
   }
 

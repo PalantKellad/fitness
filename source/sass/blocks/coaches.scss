@@ -1,13 +1,13 @@
 .coaches {
   position: relative;
-  padding-block: 46px 120px;
+  padding-block: 46px 140px;
 
   @include vp-1200 {
-    padding: 20px 101px 100px;
+    padding-block: 20px 100px;
   }
 
   @include vp-767 {
-    padding: 24px 47px 70px;
+    padding-block: 24px 70px;
   }
 
   h2 {
@@ -33,15 +33,44 @@
   }
 }
 
+.coaches__slider-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 31px;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-inline: 50px;
+
+  @include vp-1200 {
+    column-gap: 30px;
+    padding-inline: 48px;
+  }
+
+  @include vp-767 {
+    column-gap: 19px;
+    padding-inline: 15px;
+  }
+}
+
+.coaches__slider {
+  aspect-ratio: 1160 / 294;
+
+  @include vp-1200 {
+    aspect-ratio: 566 / 294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
+}
+
 .coaches__slider-button {
   --size: 23px;
-  --x-offset: -32px;
-  --y-offset: 51.2%;
   --color: var(--slider-arrow-color);
 
-  position: absolute;
-  top: var(--y-offset);
+  position: static;
   display: block;
+  min-width: var(--size);
   width: var(--size);
   height: var(--size);
   border: none;
@@ -50,15 +79,8 @@
   background-color: transparent;
   cursor: pointer;
 
-  @include vp-1200 {
-    --x-offset: 48px;
-    --y-offset: 44%;
-  }
-
   @include vp-767 {
     --size: 13px;
-    --x-offset: 18px;
-    --y-offset: 47%;
   }
 
   &::after {
@@ -69,12 +91,11 @@
   }
 
   &--prev {
-    left: var(--x-offset);
+    order: -1;
     rotate: 45deg;
   }
 
   &--next {
-    right: var(--x-offset);
     rotate: -135deg;
   }
 }

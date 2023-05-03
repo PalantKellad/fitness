@@ -4,11 +4,11 @@
   padding-left: 121px;
 
   @include vp-1200 {
-    padding: 62px 133px;
+    padding: 62px 133px 41px;
   }
 
   @include vp-767 {
-    padding: 64px 15px;
+    padding: 64px 15px 62px;
   }
 
   h2 {
@@ -32,37 +32,44 @@
 }
 
 .contacts__wrapper {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 0.97fr);
-  grid-template-rows: repeat(2, min-content);
-  column-gap: 58px;
-  padding-top: 17px;
+  position: relative;
+  padding-top: 14px;
   overflow: hidden;
-
-  &::after {
-    content: "";
-    order: 1;
-    grid-column: 2 / 3;
-    grid-row: 1 / span 50;
-    display: block;
-    width: 1px;
-    height: 83%;
-    background-color: var(--border-color);
-  }
+  columns: 2;
+  column-gap: 113px;
 
   @include vp-1200 {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
-    column-gap: 68px;
+    column-gap: 121px;
     margin-left: -3px;
-    padding-top: 19px;
+    padding-top: 21px;
   }
 
   @include vp-767 {
+    columns: initial;
     display: flex;
     flex-direction: column;
-    row-gap: 21px;
+    row-gap: 19px;
     margin-left: 0;
     padding-top: 22px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    left: 51%;
+    display: block;
+    width: 1px;
+    height: 66%;
+    background-color: var(--border-color);
+
+    @include vp-1200 {
+      left: 53%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   h3 {
@@ -72,6 +79,7 @@
     font-style: normal;
 
     @include vp-1200 {
+      margin-bottom: 6px;
       font: 700 20px / 1.5 $ff-roboto-condensed;
     }
   }
@@ -99,25 +107,16 @@
 .contacts__item {
   position: relative;
   padding-left: 3px;
+  padding-bottom: 16px;
+  break-inside: avoid;
+
+  @include vp-1200 {
+    min-width: 221px;
+    padding-bottom: 19px;
+  }
 
   @include vp-767 {
     padding-left: 0;
-  }
-
-  &:nth-child(even) {
-    grid-column: 3 / 4;
-  }
-
-  &:nth-child(odd) {
-    padding-bottom: 14px;
-    grid-column: 1 / 2;
-
-    @include vp-1200 {
-      padding-bottom: 22px;
-    }
-
-    @include vp-767 {
-      padding-bottom: 0;
-    }
+    padding-bottom: 0;
   }
 }
