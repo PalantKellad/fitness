@@ -3419,6 +3419,10 @@ button,
     padding: 33px 116px 41px;
   }
 
+  .advantages__item--featured dt {
+    font-size: 0;
+  }
+
   .advantages__item--featured p {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -3934,6 +3938,10 @@ button,
     margin: 0;
     margin-block: 9px 5px;
     padding: 32px 54px 44px;
+  }
+
+  .advantages__item--featured dt {
+    font-size: 0;
   }
 
   .advantages__item--featured p {
