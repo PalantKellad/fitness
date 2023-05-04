@@ -16,7 +16,6 @@
   grid-template-columns: 50% 50%;
 
   @include vp-1200 {
-
     grid-template-columns: 100%;
     grid-auto-rows: min-content;
   }
@@ -34,10 +33,6 @@
     @include vp-1200 {
       display: none;
     }
-  }
-
-  @include vp-1200 {
-    background: linear-gradient(180deg, var(--primary-color) 50%, var(--secondary-color) 50%);
   }
 }
 

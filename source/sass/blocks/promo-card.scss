@@ -81,6 +81,7 @@
     text-align: center;
     color: inherit;
     border: 4px solid var(--base-light);
+    user-select: none;
 
     @include vp-1200 {
       padding: 12px;
@@ -153,8 +154,18 @@
   background-size: contain;
   background-color: var(--base-quiet);
 
+  @media (min-width: 1200px) {
+    @media (min-resolution: 2dppx) {
+      --bg-url: var(--promo-retina-bg-url-big);
+    }
+  }
+
   @include vp-1200 {
     --bg-url: var(--promo-bg-url-medium);
+
+    @media (min-resolution: 2dppx) {
+      --bg-url: var(--promo-retina-bg-url-medium);
+    }
 
     flex: 1 1 63%;
     aspect-ratio: 386 / 292;
@@ -162,6 +173,10 @@
 
   @include vp-767 {
     --bg-url: var(--promo-bg-url-small);
+
+    @media (min-resolution: 2dppx) {
+      --bg-url: var(--promo-retina-bg-url-small);
+    }
 
     flex: 1 1 100%;
     min-height: 292px;

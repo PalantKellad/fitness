@@ -53,6 +53,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: inherit;
+    user-select: none;
 
     &::after {
       content: "";
@@ -86,7 +87,7 @@
   }
 
   &--main {
-    --bg-image: var(--offers-bg-big-url);
+    --bg-url: var(--offers-bg-big-url);
     --image-width: 280px;
     --image-height: 464px;
 
@@ -95,15 +96,30 @@
     color: var(--base-light);
     background-color: var(--base-bright);
 
+    @media (min-width: 1200px) {
+      @media (min-resolution: 2dppx) {
+        --bg-url: var(--offers-retina-bg-big-url);
+      }
+  }
+
     @include vp-1200 {
-      --bg-image: var(--offers-bg-medium-url);
+      --bg-url: var(--offers-bg-medium-url);
       --image-width: 399px;
+      --image-height: 461px;
+
+      @media (min-resolution: 2dppx) {
+        --bg-url: var(--offers-retina-bg-medium-url);
+      }
     }
 
     @include vp-767 {
-      --bg-image: var(--offers-bg-small-url);
+      --bg-url: var(--offers-bg-small-url);
       --image-width: 100%;
       --image-height: auto;
+
+      @media (min-resolution: 2dppx) {
+        --bg-url: var(--offers-retina-bg-small-url);
+      }
 
       position: static;
       display: flex;
@@ -154,7 +170,7 @@
       z-index: 1;
       width: var(--image-width);
       height: var(--image-height);
-      background: var(--bg-image) no-repeat;
+      background: var(--bg-url) no-repeat;
       background-size: cover;
 
       @include vp-767 {

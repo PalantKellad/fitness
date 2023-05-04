@@ -2,7 +2,7 @@
   padding-block: 21px 104px;
 
   @include vp-1200 {
-    padding-bottom: 84px;
+    padding-bottom: 83px;
   }
 
   @include vp-767 {
@@ -18,12 +18,12 @@
     text-align: center;
 
     @include vp-1200 {
+      margin-bottom: 26px;
       padding-inline: 0 7px;
       font: 600 42px / 50px $ff-alumni-sans;
     }
 
     @include vp-767 {
-      margin-bottom: 26px;
       padding-inline: 0 3px;
       font: 600 32px / 38px $ff-alumni-sans;
     }

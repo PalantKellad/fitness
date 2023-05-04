@@ -20,8 +20,8 @@
     grid-template-areas:
       "image title"
       "description description";
-    grid-template-columns: minmax(0, 84px) minmax(0, 1fr);
-    column-gap: 11px;
+    grid-template-columns: minmax(0, 80px) minmax(0, 1fr);
+    column-gap: 15px;
     padding: 33px 28px;
   }
 

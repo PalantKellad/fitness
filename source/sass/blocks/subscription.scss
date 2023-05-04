@@ -7,8 +7,18 @@
   background-color: var(--base-neutral);
   overflow-x: clip;
 
+  @media (min-width: 1200px) {
+    @media (min-resolution: 2dppx) {
+      --bg-url: var(--subscription-retina-bg-url-big);
+    }
+  }
+
   @include vp-1200 {
     --bg-url: var(--subscription-bg-url-medium);
+
+    @media (min-resolution: 2dppx) {
+      --bg-url: var(--subscription-retina-bg-url-medium);
+    }
 
     padding-block: 101px 56px;
   }

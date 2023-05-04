@@ -13,24 +13,31 @@ function setupVideo(video) {
   const button = video.querySelector('.video__button');
   const id = parseLinkURL(link);
 
-  video.addEventListener('click', () => {
-    const iframe = createIframe(id);
+  if (link) {
+    video.addEventListener('click', () => {
+      const iframe = createIframe(id);
 
-    link.remove();
-    button.remove();
-    video.appendChild(iframe);
-  });
+      link.remove();
+      if (button) {
+        button.remove();
+      }
+      video.appendChild(iframe);
+    });
 
-  link.removeAttribute('href');
-  video.classList.add('video--enabled');
+    link.removeAttribute('href');
+    video.classList.add('video--enabled');
+  }
 }
 
 function parseLinkURL(link) {
-  const regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
-  const url = link.href;
-  const match = url.match(regexp);
-
-  return match[1];
+  if (link) {
+    const regexp = /https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)/i;
+    const url = link.href;
+    const match = url.match(regexp);
+    return match[1];
+  } else {
+    return 'dQw4w9WgXcQ';
+  }
 }
 
 function createIframe(id) {

@@ -27,15 +27,13 @@
       <a class="hero__logo logo" href="./">
         <img src="./img/svg/logo.svg" width="121" height="21" alt="Логотип фитнес центра Supergym.">
       </a>
-      <a class="hero__phone" href="tel:+78005555555" aria-label="Номер телефона: 8.800.555.55.55">8-800-555-55-55</a>
+      <a class="hero__phone" href="tel:+78005555555" aria-label="Номер телефона">8-800-555-55-55</a>
     </div>
     <div class="hero__content" style="
       --header-bg-big-url: url(../img/hero/hero-big.webp);
       --header-bg-medium-url: url(../img/hero/hero-medium.webp);
-      --header-bg-small-url: url(../img/hero/hero-small.webp);
       --header-retina-bg-big-url: url(../img/hero/hero-big@2x.webp);
       --header-retina-bg-medium-url: url(../img/hero/hero-medium@2x.webp);
-      --header-retina-bg-small-url: url(../img/hero/hero-small@2x.webp);
       ">
       <h1>Фитнес центр</h1>
       <span>Омск</span>
@@ -44,7 +42,7 @@
         <li>Групповые занятия</li>
         <li>Кардио&#8209;зона</li>
       </ul>
-      <a class="hero__order-button" href="#">Купить абонемент</a>
+      <a class="hero__order-button" href="#subscription">Купить абонемент</a>
     </div>
   </div>
 </header>
@@ -53,7 +51,7 @@
     <div class="about">
       <div class="about__text">
         <h2>Тренажерный зал</h2>
-        <span>Просторный зал площадью 900 кв/м</span>
+        <span>Просторный зал площадью 900 <abbr title="квадратных метров">кв/м</abbr></span>
         <hr>
         <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
         <div class="about__more">
@@ -81,9 +79,11 @@
       </div>
     </div>
   </section>
-  <section class="subscription" style="
+  <section class="subscription" id="subscription" style="
         --subscription-bg-url-big: url(../img/plates-big.webp);
         --subscription-bg-url-medium: url(../img/plates-medium.webp);
+        --subscription-retina-bg-url-big: url(../img/plates-big@2x.webp);
+        --subscription-retina-bg-url-medium: url(../img/plates-medium@2x.webp);
       ">
     <h2>Абонементы</h2>
     <div class="subscription__tabs tabs container">
@@ -128,19 +128,19 @@
             <li class="feature-list__item" tabindex="0">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
-              <b data-price="5000" aria-label="Цена 5000 рублей.">5000</b>
+              <b data-price="5000" aria-label="Цена рублей.">5000</b>
               <a href="#">Купить абонемент</a>
             </li>
             <li class="feature-list__item" tabindex="0">
               <h3>Дневной</h3>
               <p>с&nbsp;8:00 до&nbsp;17:00</p>
-              <b data-price="1700" aria-label="Цена 1700 рублей.">1700</b>
+              <b data-price="1700" aria-label="Цена рублей.">1700</b>
               <a href="#">Купить абонемент</a>
             </li>
             <li class="feature-list__item" tabindex="0">
               <h3>Полный день</h3>
               <p>с&nbsp;8:00 до&nbsp;22:00</p>
-              <b data-price="2700" aria-label="Цена 2700 рублей.">2700</b>
+              <b data-price="2700" aria-label="Цена рублей.">2700</b>
               <a href="#">Купить абонемент</a>
             </li>
           </ul>
@@ -150,23 +150,23 @@
         id="panel-2"
         role="tabpanel"
         aria-labelledby="tab-2">
-          <ul class="tabs__content feature-list" tabindex="0">
-            <li class="feature-list__item">
+          <ul class="tabs__content feature-list">
+            <li class="feature-list__item" tabindex="0">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
-              <b data-price="28000">28000</b>
+              <b data-price="28000" aria-label="Цена рублей.">28000</b>
               <a href="#">Купить абонемент</a>
             </li>
             <li class="feature-list__item" tabindex="0">
               <h3>Дневной</h3>
               <p>с&nbsp;8:00 до&nbsp;17:00</p>
-              <b data-price="1600">1600</b>
+              <b data-price="1600" aria-label="Цена рублей.">1600</b>
               <a href="#">Купить абонемент</a>
             </li>
             <li class="feature-list__item" tabindex="0">
               <h3>Полный день</h3>
               <p>с&nbsp;8:00 до&nbsp;22:00</p>
-              <b data-price="2600">2600</b>
+              <b data-price="2600" aria-label="Цена рублей.">2600</b>
               <a href="#">Купить абонемент</a>
             </li>
           </ul>
@@ -176,23 +176,23 @@
         id="panel-3"
         role="tabpanel"
         aria-labelledby="tab-3">
-          <ul class="tabs__content feature-list" tabindex="0">
-            <li class="feature-list__item">
+          <ul class="tabs__content feature-list">
+            <li class="feature-list__item" tabindex="0">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
-              <b data-price="50000">50000</b>
+              <b data-price="50000" aria-label="Цена рублей.">50000</b>
               <a href="#">Купить абонемент</a>
             </li>
             <li class="feature-list__item" tabindex="0">
               <h3>Дневной</h3>
               <p>с&nbsp;8:00 до&nbsp;17:00</p>
-              <b data-price="1500">1500</b>
+              <b data-price="1500" aria-label="Цена рублей.">1500</b>
               <a href="#">Купить абонемент</a>
             </li>
             <li class="feature-list__item" tabindex="0">
               <h3>Полный день</h3>
               <p>с&nbsp;8:00 до&nbsp;22:00</p>
-              <b data-price="2500">2500</b>
+              <b data-price="2500" aria-label="Цена рублей.">2500</b>
               <a href="#">Купить абонемент</a>
             </li>
           </ul>
@@ -224,11 +224,14 @@
         --promo-bg-url-big: url(../img/promo/promo-big.webp);
         --promo-bg-url-medium: url(../img/promo/promo-medium.webp);
         --promo-bg-url-small: url(../img/promo/promo-small.webp);
+        --promo-retina-bg-url-big: url(../img/promo/promo-big@2x.webp);
+        --promo-retina-bg-url-medium: url(../img/promo/promo-medium@2x.webp);
+        --promo-retina-bg-url-small: url(../img/promo/promo-small@2x.webp);
       ">
       </div>
     </div>
   </section>
-  <section class="coaches">
+  <section class="coaches" id="coaches">
     <div class="container">
       <h2>Тренеры</h2>
     </div>
@@ -438,7 +441,7 @@
       </div>
     </div>
   </section>
-  <section class="offers" style="
+  <section class="offers" id="offers" style="
       --offers-bg-big-url: url(../img/offers/offers-big.webp);
       --offers-bg-medium-url: url(../img/offers/offers-medium.webp);
       --offers-bg-small-url: url(../img/offers/offers-small.webp);
@@ -451,7 +454,7 @@
       <div class="offers__wrapper">
         <div class="offers__main-offer offer offer--main">
           <h3>Год</h3>
-          <b>4999</b>
+          <b aria-label="Цена рублей.">4999</b>
           <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
           <a href="#">Подробнее</a>
         </div>
@@ -476,36 +479,39 @@
       <div class="reviews__slider-wrapper">
         <div class="review-slider swiper">
           <ul class="review-slider__list swiper-wrapper">
-            <li class="review-slider__item">
+            <li class="review-slider__item" tabindex="0">
               <h3>Анна Орлова</h3>
               <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
               <div class="review-slider__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/reviews/anna-orlova-big.webp 1x, ./img/reviews/anna-orlova-big@2x.webp 2x" width="80" height="80">
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="./img/reviews/anna-orlova-big.webp 1x, ./img/reviews/anna-orlova-big@2x.webp 2x" width="80" height="80">
                   <source type="image/webp" media="(max-width: 767px)" srcset="./img/reviews/anna-orlova-small.webp 1x, ./img/reviews/anna-orlova-small@2x.webp 2x" width="68" height="68">
                   <img src="./img/reviews/anna-orlova-big.webp" width="80" height="80" alt="Фото Анны Орловой.">
                 </picture>
               </div>
             </li>
-            <li class="review-slider__item">
+            <li class="review-slider__item" tabindex="0">
               <h3>Юрий Каменев</h3>
               <p>Мне нравится, что в&nbsp;клубе занимаются только натуральные спортсмены. Никакого допинга. Ни&nbsp;капли. Я&nbsp;сам накачался. Без протеина!</p>
               <div class="review-slider__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/reviews/ronni-coleman-big.webp 1x, ./img/reviews/ronni-coleman-big@2x.webp 2x" width="80" height="80">
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="./img/reviews/ronni-coleman-big.webp 1x, ./img/reviews/ronni-coleman-big@2x.webp 2x" width="80" height="80">
                   <source type="image/webp" media="(max-width: 767px)" srcset="./img/reviews/ronni-coleman-small.webp 1x, ./img/reviews/ronni-coleman-small@2x.webp 2x" width="68" height="68">
-                  <img src="./img/reviews/ronni-coleman-big.webp" width="80" height="80" alt="Фото Юрия Каменев.">
+                  <img src="./img/reviews/ronni-coleman-big.webp" width="80" height="80" alt="Фото Юрия Каменева.">
                 </picture>
               </div>
             </li>
-            <li class="review-slider__item">
+            <li class="review-slider__item" tabindex="0">
               <h3>Валя Тестостеронова</h3>
               <p>Люблю женские соревнования по&nbsp;тяжёлой атлетике, которые проводят в&nbsp;клубе. Принимаю участие каждый год, и&nbsp;каждый год удаётся побеждать!</p>
               <div class="review-slider__image">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/reviews/kai-greene-big.webp 1x, ./img/reviews/kai-greene-big@2x.webp 2x" width="80" height="80">
+                  <source type="image/webp" media="(max-width: 1199px)" srcset="./img/reviews/kai-greene-big.webp 1x, ./img/reviews/kai-greene-big@2x.webp 2x" width="80" height="80">
                   <source type="image/webp" media="(max-width: 767px)" srcset="./img/reviews/kai-greene-small.webp 1x, ./img/reviews/kai-greene-small@2x.webp 2x" width="68" height="68">
-                  <img src="./img/reviews/kai-greene-big.webp" width="80" height="80" alt="Фото Анны Орловой.">
+                  <img src="./img/reviews/kai-greene-big.webp" width="80" height="80" alt="Фото Вали Тестостероновой.">
                 </picture>
               </div>
             </li>
@@ -537,26 +543,26 @@
         <h2>Контакты</h2>
         <div class="contacts__wrapper">
           <div class="contacts__item">
+            <h3>Адрес:</h3>
             <address>
-              <h3>Адрес:</h3>
               <p>г.&nbsp;Омск, ул. 60 лет Октября, 7</p>
             </address>
           </div>
           <div class="contacts__item">
             <h3>График работы:</h3>
-            <p>Пн&#8209;Вс: с&nbsp;8:00 до&nbsp;22:00</p>
+            <p><abbr title="С понедельника по воскресенье">Пн&#8209;Вс</abbr>: с&nbsp;8:00 до&nbsp;22:00</p>
           </div>
           <div class="contacts__item">
             <h3>Телефон:</h3>
-            <a href="tel:88005555555">8-800-555-55-55</a>
+            <a href="tel:88005555555" aria-label="Номер телефона">8-800-555-55-55</a>
           </div>
           <div class="contacts__item">
             <h3>Email:</h3>
             <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
           </div>
         </div>
+      </section>
   </footer>
-  </div>
 </main>
 <footer class="page__footer page-footer">
   <div class="container page-footer__wrapper">
@@ -566,19 +572,19 @@
       </a>
       <ul class="page-footer__menu main-menu">
         <li class="main-menu__item">
-          <a class="main-menu__link" href="">Услуги</a>
+          <a class="main-menu__link" href="#">Услуги</a>
         </li>
         <li class="main-menu__item">
-          <a class="main-menu__link" href="">Абонементы</a>
+          <a class="main-menu__link" href="#subscription">Абонементы</a>
         </li>
         <li class="main-menu__item">
-          <a class="main-menu__link" href="">Акции</a>
+          <a class="main-menu__link" href="#offers">Акции</a>
         </li>
         <li class="main-menu__item">
-          <a class="main-menu__link" href="">Тренеры</a>
+          <a class="main-menu__link" href="#coaches">Тренеры</a>
         </li>
         <li class="main-menu__item">
-          <a class="main-menu__link" href="">Расписание</a>
+          <a class="main-menu__link" href="#">Расписание</a>
         </li>
       </ul>
     </nav>

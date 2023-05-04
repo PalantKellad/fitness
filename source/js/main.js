@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {findVideos} from './modules/video/video';
 import {TabsAutomatic} from './modules/tabs/tabs';
+import {initPhoneMask} from './modules/phone-mask/phone-mask';
 
 
 // ---------------------------------
@@ -17,6 +18,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  window.addEventListener('load', () => {
+    initPhoneMask();
+  });
 });
 
 // ---------------------------------

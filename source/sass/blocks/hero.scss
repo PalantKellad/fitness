@@ -68,8 +68,18 @@
   padding-right: 60.6%;
   color: var(--base-light);
 
+  @media (min-width: 1200px) {
+    @media (min-resolution: 2dppx) {
+      --bg-image: var(--header-retina-bg-big-url);
+    }
+  }
+
   @include vp-1200 {
     --bg-image: var(--header-bg-medium-url);
+
+    @media (min-resolution: 2dppx) {
+      --bg-image: var(--header-retina-bg-medium-url);
+    }
 
     padding-top: 68px;
     padding-right: 43%;
@@ -185,6 +195,7 @@
   text-transform: uppercase;
   text-align: center;
   border: 4px solid var(--base-light);
+  user-select: none;
 
   @include vp-1200 {
     padding-inline: 32px;
