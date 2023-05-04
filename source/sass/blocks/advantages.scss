@@ -232,6 +232,16 @@
       margin-bottom: 3px;
       font: 700 74px / 1 $ff-roboto-condensed;
       -webkit-text-fill-color: initial;
+
+      @include vp-1200 {
+        margin-bottom: 3px;
+        font: 700 74px / 1 $ff-roboto-condensed;
+      }
+
+      @include vp-767 {
+        margin-bottom: 3px;
+        font: 700 74px / 1 $ff-roboto-condensed;
+      }
     }
 
     p {
