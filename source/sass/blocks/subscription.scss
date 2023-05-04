@@ -1,6 +1,10 @@
 .subscription {
   --bg-url: var(--subscription-bg-url-big);
-
+  --width: 321px;
+  --height: 384px;
+  --right: -110px;
+  --bottom: -96px;
+  --transform: rotate(150deg);
 
   position: relative;
   padding-block: 120px 82px;
@@ -15,9 +19,17 @@
 
   @include vp-1200 {
     --bg-url: var(--subscription-bg-url-medium);
+    --width: 289px;
+    --height: 345px;
+    --right: -10px;
+    --bottom: -76px;
 
     @media (min-resolution: 2dppx) {
       --bg-url: var(--subscription-retina-bg-url-medium);
+      --width: 289px;
+      --height: 345px;
+      --right: -10px;
+      --bottom: -76px;
     }
 
     padding-block: 101px 56px;
@@ -30,17 +42,13 @@
   &::after {
     content: "";
     position: absolute;
-    right: -110px;
-    bottom: -96px;
-    width: 321px;
-    height: 384px;
+    right: var(--right);
+    bottom: var(--bottom);
+    width: var(--width);
+    height: var(--height);
     background: var(--bg-url) no-repeat;
-    transform: rotate(150deg);
-
-    @include vp-1200 {
-      right: -2px;
-      bottom: -86px;
-    }
+    background-size: cover;
+    transform: var(--transform);
 
     @include vp-767 {
       display: none;
@@ -48,7 +56,9 @@
   }
 
   h2 {
-    margin: 0;
+    max-width: 90%;
+    margin-top: 0;
+    margin-inline: auto;
     margin-bottom: 8px;
     font: 600 54px / 65px $ff-alumni-sans;
     letter-spacing: 0.03em;

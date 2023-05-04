@@ -1,5 +1,4 @@
 .about {
-  position: relative;
   grid-column: main;
   display: flex;
   padding-block: 120px 235px;
@@ -114,6 +113,8 @@
 }
 
 .about__image {
+  position: relative;
+  align-self: start;
   img {
     width: 100%;
     object-fit: cover;
@@ -131,8 +132,8 @@
 .about__video {
   position: absolute;
   z-index: 1;
-  bottom: 120px;
-  left: 53.2%;
+  bottom: -115px;
+  left: 18.2%;
   width: 364px;
   height: 228px;
 

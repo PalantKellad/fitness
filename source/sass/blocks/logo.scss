@@ -1,0 +1,49 @@
+.logo {
+  --scale-top: scaleX(0);
+  --scale-bottom: scaleX(0);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--base-light);
+    transform: var(--scale-top);
+    transform-origin: 50%;
+    transition: 300ms transform ease-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--base-light);
+    transform: var(--scale-bottom);
+    transform-origin: 50%;
+    transition: 300ms transform ease-out;
+  }
+
+  @include hover {
+    --scale-bottom: scaleX(1);
+  }
+
+  @include focus {
+    --scale-top: scaleX(1);
+    --scale-bottom: scaleX(1);
+
+    outline: none;
+  }
+
+  @include active {
+    opacity: 0.8;
+  }
+}

@@ -15,6 +15,7 @@
     font: 600 54px / 65px $ff-alumni-sans;
     letter-spacing: 0.03em;
     text-align: center;
+    hyphens: auto;
 
     @include vp-1200 {
       margin-bottom: 47px;

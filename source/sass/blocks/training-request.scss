@@ -33,6 +33,7 @@
 
 .training-request__form-wrapper {
   --border-color: #74819c;
+  --bg-color: transparent;
 
   form {
     display: grid;
@@ -81,7 +82,7 @@
     color: var(--base-light);
     border: none;
     border-bottom: 1px solid var(--border-color);
-    background-color: transparent;
+    background-color: var(--bg-color);
 
     &::placeholder {
       font: 400 14px / 16px $ff-roboto-condensed;
@@ -91,19 +92,60 @@
     @include vp-767 {
       padding-bottom: 6px;
     }
+
+    @include hover {
+      --border-color: var(--base-light);
+      --bg-color: var(--base-quiet);
+    }
+
+    @include focus {
+      --border-color: var(--base-light);
+      --bg-color: var(--base-quiet);
+    }
   }
 
   button {
+    --button-text-color: inherit;
+    --button-border-color: var(--base-light);
+    --button-bg-color: transparent;
+
     grid-column: span 2;
     width: 100%;
     padding: 16px;
     font: 700 14px / 16px $ff-roboto-condensed;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: inherit;
-    background: transparent;
-    border: 3px solid var(--base-light);
+    color: var(--button-text-color);
+    background: var(--button-bg-color);
+    border: 3px solid var(--button-border-color);
     cursor: pointer;
     user-select: none;
+
+    @include hover {
+      --button-text-color: var(--base-light);
+      --button-border-color: var(--base-light);
+      --button-bg-color: var(--base-quiet);
+    }
+
+    @include focus {
+      --button-text-color: var(--base-light);
+      --button-border-color: var(--base-dark);
+      --button-bg-color: var(--base-quiet);
+    }
+
+    @include active {
+      --button-text-color: var(--base-dark);
+      --button-border-color: var(--base-quiet);
+      --button-bg-color: var(--base-light);
+    }
+
+    &:disabled {
+      --button-text-color: var(--base-dark);
+      --button-bg-color: var(--themed-quiet);
+
+      opacity: 0.8;
+      filter: grayscale(20);
+      pointer-events: none;
+    }
   }
 }

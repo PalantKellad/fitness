@@ -51,4 +51,5 @@ const reviewsSlider = new Swiper('.review-slider', {
     nextSlideMessage: 'Следующий слайд',
   },
   slidesPerView: 1,
+  spaceBetween: 5,
 });

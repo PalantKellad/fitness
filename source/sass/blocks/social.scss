@@ -15,24 +15,29 @@
 
 .social__link {
   --icon-size: 25px;
+  --color: var(--base-light);
 
   display: grid;
   place-items: center;
   min-width: var(--icon-size);
   width: var(--icon-size);
   height: var(--icon-size);
-  filter: var(--icon-light);
+  color: var(--color);
 
   @include vp-1200 {
     --icon-size: 26px;
   }
 
   @include hover {
-    filter: var(--icon-light) var(--hover-shadow-light);
+    --color: var(--themed-quiet);
+  }
+
+  @include focus {
+    --color: var(--themed-quiet);
   }
 
   @include active {
-    filter: var(--icon-active) var(--hover-shadow-light);
+    opacity: 0.8;
   }
 }
 

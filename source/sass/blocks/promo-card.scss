@@ -71,7 +71,10 @@
   }
 
   a {
-    grid-area: button;
+    --bg-color: transparent;
+    --border-color: var(--base-light);
+    --text-color: inherit;
+
     align-self: start;
     display: block;
     padding: 25px;
@@ -79,16 +82,51 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
-    color: inherit;
-    border: 4px solid var(--base-light);
+    color: var(--text-color);
+    border: 4px solid var(--border-color);
+    background-color: var(--bg-color);
     user-select: none;
+    transition: 300ms ease-out;
 
     @include vp-1200 {
       padding: 12px;
       font: 700 10px / 12px $ff-roboto-condensed;
       border: 2px solid var(--base-light);
     }
+
+    @include hover {
+      --bg-color: var(--base-quiet);
+      --border-color: var(--base-light);
+      --text-color: inherit;
+    }
+
+    @include focus {
+      --bg-color: var(--base-quiet);
+      --border-color: var(--base-dark);
+      --text-color: inherit;
+    }
+
+    @include active {
+      --bg-color: var(--base-quiet);
+      --border-color: var(--themed-light);
+      --text-color: inherit;
+    }
+
+    &.is-disabled {
+      --text-color: var(--base-light);
+      --border-color: var(--themed-quiet);
+      --bg-color: var(--themed-quiet);
+
+      opacity: 0.8;
+      pointer-events: none;
+    }
   }
+}
+
+.promo-card__buttons-wrapper {
+  grid-area: button;
+  display: grid;
+  row-gap: 20px;
 }
 
 .promo-card__timing {

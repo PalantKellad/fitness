@@ -26,9 +26,57 @@
 }
 
 .main-menu__link {
+  --scale-top: scaleX(0);
+  --scale-bottom: scaleX(0);
+  --color: inherit;
+
+  position: relative;
   font: 400 14px / 16px $ff-roboto-condensed;
-  color: inherit;
+  color: var(--color);
   user-select: none;
+
+  &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 0.06em;
+      background-color: currentColor;
+      transform: var(--scale-top);
+      transform-origin: 50%;
+      transition: 300ms transform ease-out;
+  }
+
+  &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 0.06em;
+      background-color: currentColor;
+      transform: var(--scale-bottom);
+      transform-origin: 50%;
+      transition: 300ms transform ease-out;
+  }
+
+  @include hover {
+    --scale-bottom: scaleX(1);
+  }
+
+  @include focus {
+      --scale-top: scaleX(1);
+      --scale-bottom: scaleX(1);
+
+      outline: none;
+  }
+
+  @include active {
+      opacity: 0.8;
+  }
 
   @include vp-767 {
     padding-bottom: 5px;

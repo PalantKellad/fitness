@@ -31,20 +31,66 @@
     align-self: baseline;
     width: 82px;
     height: 17px;
-    padding-top: 5px;
+    transform: translateY(7px);
   }
 
   @include vp-767 {
     width: 69px;
     height: 24px;
-    padding-top: 5px;
+    transform: translateY(4px);
+  }
+}
+
+.hero__contacts {
+  flex: 1 1 0;
+  max-width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: end;
+  align-items: start;
+
+  @include vp-1200 {
+    max-width: 40%;
   }
 }
 
 .hero__phone {
+  --scale-top: scaleX(0);
+  --scale-bottom: scaleX(0);
+
+  position: relative;
   font: 600 26px / 31px $ff-alumni-sans;
   letter-spacing: 0.03em;
   color: var(--base-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 0.06em;
+    background-color: currentColor;
+    transform: var(--scale-top);
+    transform-origin: 50%;
+    transition: 300ms transform ease-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 0.06em;
+    background-color: currentColor;
+    transform: var(--scale-bottom);
+    transform-origin: 50%;
+    transition: 300ms transform ease-out;
+  }
 
   @include vp-1200 {
     font: 600 24px / 29px $ff-alumni-sans;
@@ -53,6 +99,21 @@
 
   @include vp-767 {
     font: 600 20px / 24px $ff-alumni-sans;
+  }
+
+  @include hover {
+    --scale-bottom: scaleX(1);
+  }
+
+  @include focus {
+    --scale-top: scaleX(1);
+    --scale-bottom: scaleX(1);
+
+    outline: none;
+  }
+
+  @include active {
+    opacity: 0.8;
   }
 }
 
@@ -97,6 +158,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: right;
+    hyphens: auto;
     -webkit-text-stroke: 4px var(--base-light);
 
     @include vp-1200 {
@@ -184,6 +246,10 @@
 }
 
 .hero__order-button {
+  --text-color: inherit;
+  --border-color: var(--base-light);
+  --bg-color: transparent;
+
   order: 4;
   grid-column: span 2;
   display: block;
@@ -191,11 +257,17 @@
   padding: 19px 55px;
   font: 700 12px / 14px $ff-roboto-condensed;
   letter-spacing: 0.05em;
-  color: inherit;
   text-transform: uppercase;
   text-align: center;
-  border: 4px solid var(--base-light);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 4px solid var(--border-color);
+  transition: color 300ms ease-out, background-color 300ms ease-out, border-color 300ms ease-out;
   user-select: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 
   @include vp-1200 {
     padding-inline: 32px;
@@ -205,5 +277,32 @@
     justify-self: stretch;
     margin-right: 0;
     padding-block: 21px;
+  }
+
+  @include hover {
+    --text-color: var(--themed-dark);
+    --border-color: var(--base-light);
+    --bg-color: var(--base-light);
+  }
+
+  @include focus {
+    --text-color: var(--themed-dark);
+    --border-color: var(--themed-dark);
+    --bg-color: var(--base-light);
+  }
+
+  @include active {
+    --text-color: var(--themed-dark);
+    --border-color: var(--themed-bright);
+    --bg-color: var(--base-light);
+  }
+
+  &--disabled {
+    --text-color: var(--base-neutral);
+    --border-color: var(--themed-quiet);
+    --bg-color: var(--themed-quiet);
+
+    opacity: 0.8;
+    pointer-events: none;
   }
 }

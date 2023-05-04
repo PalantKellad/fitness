@@ -20,6 +20,7 @@
     margin: 0;
     margin-bottom: 3px;
     font: 700 26px / 1.5 $ff-roboto-condensed;
+    hyphens: auto;
   }
 
   p {
@@ -45,6 +46,8 @@
   }
 
   a {
+    --border-color: currentColor;
+
     position: relative;
     align-self: start;
     display: block;
@@ -55,6 +58,10 @@
     color: inherit;
     user-select: none;
 
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
     &::after {
       content: "";
       position: relative;
@@ -62,11 +69,23 @@
       bottom: 1px;
       width: 100%;
       height: 1px;
-      background-color: currentColor;
+      background-color: var(--border-color);
     }
 
     @include vp-767 {
       align-self: center;
+    }
+
+    @include hover {
+      --border-color: var(--themed-bright);
+    }
+
+    @include focus {
+      --border-color: var(--themed-bright);
+    }
+
+    @include active {
+      opacity: 0.8;
     }
   }
 
@@ -133,12 +152,14 @@
       margin: 0;
       font: 700 28px / 1.56 $ff-roboto-condensed;
       letter-spacing: 0.05em;
+      hyphens: auto;
     }
 
     b {
       display: block;
       margin-bottom: 25px;
       font: 700 70px / 0.85 $ff-roboto-condensed;
+      hyphens: auto;
 
       @include vp-767 {
         margin-bottom: 19px;
@@ -159,6 +180,14 @@
       @include vp-767 {
         align-self: center;
         margin-bottom: 45px;
+      }
+
+      @include hover {
+        --border-color: var(--themed-light);
+      }
+
+      @include focus {
+        --border-color: var(--themed-light);
       }
     }
 

@@ -84,8 +84,21 @@
     rotate: -135deg;
   }
 
+    @include hover {
+    --color: var(--themed-dark);
+  }
+
+  @include focus {
+    --color: var(--themed-dark);
+    outline-offset: 5px;
+  }
+
+  @include active {
+    --color: var(--themed-light);
+  }
+
   &:disabled {
-    opacity: 0.3;
+    opacity: 0.8;
     pointer-events: none;
   }
 }

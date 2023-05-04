@@ -40,11 +40,11 @@
 }
 
 .page-footer__logo {
-  padding-top: 9px;
+  transform: translateY(6px);
 
   @include vp-1200 {
     max-width: 81px;
-    padding-top: 0;
+    transform: translateY(0);
   }
 
   @include vp-767 {
