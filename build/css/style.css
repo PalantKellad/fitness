@@ -1161,6 +1161,9 @@ button,
   .hero__content h1 {
     margin-right: 0;
     margin-bottom: 23px;
+    -webkit-hyphens: initial;
+        -ms-hyphens: initial;
+            hyphens: initial;
   }
 }
 .hero__content span {
@@ -1524,11 +1527,6 @@ button,
         flex-basis: 100%;
   }
 }
-@media (max-width: 767px) {
-  .about__image {
-    margin-bottom: 40px;
-  }
-}
 
 .about__video {
   position: absolute;
@@ -1547,7 +1545,7 @@ button,
 }
 @media (max-width: 1199px) {
   .about__video {
-    bottom: 100px;
+    bottom: -83px;
     left: 50%;
     width: 39.2%;
     height: auto;
@@ -1557,6 +1555,7 @@ button,
   .about__video {
     position: relative;
     inset: initial;
+    margin-top: 40px;
     width: 100%;
     height: auto;
     min-height: 167px;
@@ -2978,7 +2977,7 @@ button,
 }
 @media (max-width: 767px) {
   .advantages__item p {
-    padding-inline: 46px;
+    padding-inline: 31px;
     text-align: center;
   }
 }
