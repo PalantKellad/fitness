@@ -217,6 +217,14 @@
 
     dt {
       font-size: 0;
+
+      @include vp-1200 {
+        font-size: 0;
+      }
+
+      @include vp-767 {
+        font-size: 0;
+      }
     }
 
     b {
