@@ -27,7 +27,9 @@
       <a class="hero__logo logo" href="./">
         <img src="./img/svg/logo.svg" width="121" height="21" alt="Логотип фитнес центра Supergym.">
       </a>
-      <a class="hero__phone" href="tel:+78005555555" aria-label="Номер телефона">8-800-555-55-55</a>
+      <div class="hero__contacts">
+        <a class="hero__phone" href="tel:+78005555555" aria-label="Номер телефона">8-800-555-55-55</a>
+      </div>
     </div>
     <div class="hero__content" style="
       --header-bg-big-url: url(../img/hero/hero-big.webp);
@@ -65,17 +67,17 @@
           <source type="image/webp" media="(max-width: 767px)" srcset="./img/about/gym-small.webp 1x, ./img/about/gym-small@2x.webp 2x" width="640" height="626">
           <img src="./img/about/gym-big.webp" width="660" height="401" alt="Ряды тренажёров напротив панорамного зеркала в большом светлом зале.">
         </picture>
-      </div>
-      <div class="about__video video" data-video>
-        <a class="video__link" href="https://youtu.be/9TZXsZItgdw">
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="./img/video/video-cover-big.webp 1x, ./img/video/video-cover-big@2x.webp 2x" width="364" height="228">
-            <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-cover-medium.webp 1x, ./img/video/video-cover-medium@2x.webp 2x" width="226" height="167">
-            <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-cover-small.webp 1x, ./img/video/video-cover-small@2x.webp 2x" width="320" height="167">
-            <img src="./img/video/video-cover-big.webp" alt="Видео-обзор тренажёрного зала." width="364" height="228" >
-          </picture>
-        </a>
-        <button class="video__button" type="button">Включить видео</button>
+        <div class="about__video video" data-video>
+          <a class="video__link" href="https://youtu.be/9TZXsZItgdw">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/video/video-cover-big.webp 1x, ./img/video/video-cover-big@2x.webp 2x" width="364" height="228">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-cover-medium.webp 1x, ./img/video/video-cover-medium@2x.webp 2x" width="226" height="167">
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-cover-small.webp 1x, ./img/video/video-cover-small@2x.webp 2x" width="320" height="167">
+              <img src="./img/video/video-cover-big.webp" alt="Видео-обзор тренажёрного зала." width="364" height="228">
+            </picture>
+          </a>
+          <button class="video__button" type="button">Включить видео</button>
+        </div>
       </div>
     </div>
   </section>
@@ -218,7 +220,9 @@
           </div>
         </dl>
         <p>Ежегодные соревнования по&nbsp;CrossFit</p>
-        <a href="#">Заполнить заявку</a>
+        <div class="promo-card__buttons-wrapper">
+          <a href="#">Заполнить заявку</a>
+        </div>
       </div>
       <div class="promo-card__decoration" style="
         --promo-bg-url-big: url(../img/promo/promo-big.webp);
