@@ -3423,6 +3423,11 @@ button,
     font-size: 0;
   }
 
+  .advantages__item--featured b {
+    margin-bottom: 3px;
+    font: 700 74px/1 "Roboto Condensed", "Arial", sans-serif;
+  }
+
   .advantages__item--featured p {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -3942,6 +3947,11 @@ button,
 
   .advantages__item--featured dt {
     font-size: 0;
+  }
+
+  .advantages__item--featured b {
+    margin-bottom: 3px;
+    font: 700 74px/1 "Roboto Condensed", "Arial", sans-serif;
   }
 
   .advantages__item--featured p {
