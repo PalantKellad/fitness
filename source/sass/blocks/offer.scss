@@ -119,7 +119,7 @@
       @media (min-resolution: 2dppx) {
         --bg-url: var(--offers-retina-bg-big-url);
       }
-  }
+    }
 
     @include vp-1200 {
       --bg-url: var(--offers-bg-medium-url);

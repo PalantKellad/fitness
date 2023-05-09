@@ -53,3 +53,6 @@ const reviewsSlider = new Swiper('.review-slider', {
   slidesPerView: 1,
   spaceBetween: 5,
 });
+
+coachesSlider.init();
+reviewsSlider.init();

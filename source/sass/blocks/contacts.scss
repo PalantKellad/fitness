@@ -140,7 +140,7 @@
     }
 
     @include hover {
-    --scale-bottom: scaleX(1);
+      --scale-bottom: scaleX(1);
     }
 
     @include focus {

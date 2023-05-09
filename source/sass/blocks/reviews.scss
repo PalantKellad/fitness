@@ -84,7 +84,7 @@
     rotate: -135deg;
   }
 
-    @include hover {
+  @include hover {
     --color: var(--themed-dark);
   }
 

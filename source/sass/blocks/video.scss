@@ -89,7 +89,7 @@
 
   @include focus {
     background: url("../img/stack.svg#icon-play") no-repeat 61% / 36%,
-    linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
+      linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
   }
 
   &:disabled {
