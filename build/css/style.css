@@ -3439,6 +3439,7 @@ button,
   .advantages__item--featured b {
     margin-bottom: 3px;
     font: 700 74px/1 "Roboto Condensed", "Arial", sans-serif;
+    word-break: break-all;
   }
 
   .advantages__item--featured p {
@@ -3942,6 +3943,12 @@ button,
 
   .advantages__item dt {
     padding-top: 6px;
+  }
+
+  .advantages__item b {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .advantages__item span {

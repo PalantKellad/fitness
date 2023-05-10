@@ -163,6 +163,12 @@
       font: 700 58px / 1 $ff-roboto-condensed;
       word-break: initial;
     }
+
+    @include vp-767 {
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
   }
 
   span {
@@ -239,6 +245,7 @@
       @include vp-1200 {
         margin-bottom: 3px;
         font: 700 74px / 1 $ff-roboto-condensed;
+        word-break: break-all;
       }
 
       @include vp-767 {
