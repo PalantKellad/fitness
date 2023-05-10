@@ -84,6 +84,7 @@
     padding-top: 65px;
     font: 700 60px / 1.5 $ff-roboto-condensed;
     hyphens: auto;
+    word-break: break-all;
     color: var(--themed-light);
 
     @include vp-767 {
@@ -98,6 +99,7 @@
       z-index: -1;
       bottom: -4px;
       left: -19px;
+      width: 150%;
       font: 700 100px / 1.5 $ff-roboto-condensed;
       color: var(--price-shadow);
 

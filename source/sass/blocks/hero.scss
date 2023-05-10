@@ -60,6 +60,7 @@
   --scale-bottom: scaleX(0);
 
   position: relative;
+  z-index: 2;
   font: 600 26px / 31px $ff-alumni-sans;
   letter-spacing: 0.03em;
   color: var(--base-light);
@@ -159,6 +160,7 @@
     text-transform: uppercase;
     text-align: right;
     hyphens: auto;
+    overflow-wrap: anywhere;
     -webkit-text-stroke: 4px var(--base-light);
 
     @include vp-1200 {
@@ -171,6 +173,7 @@
       margin-right: 0;
       margin-bottom: 23px;
       hyphens: initial;
+      text-indent: -7px;
     }
   }
 

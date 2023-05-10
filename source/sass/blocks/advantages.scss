@@ -125,6 +125,7 @@
     align-self: start;
     padding-block: 4px;
     font: 700 22px / 1.5 $ff-roboto-condensed;
+    word-break: break-all;
 
     @include vp-1200 {
       padding-block: 0;
@@ -148,6 +149,7 @@
     flex-direction: column;
     font: 700 71px / 1 $ff-roboto-condensed;
     hyphens: auto;
+    word-break: break-all;
     background: linear-gradient(
       var(--gradient-angle),
       var(--primary-accent) 0%,
@@ -159,6 +161,7 @@
 
     @include vp-1200 {
       font: 700 58px / 1 $ff-roboto-condensed;
+      word-break: initial;
     }
   }
 
