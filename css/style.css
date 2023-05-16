@@ -3702,7 +3702,11 @@ button,
   }
 
   .hero__content ul {
-    padding-top: 24px;
+    -ms-flex-item-align: end;
+    -ms-grid-row-align: end;
+    align-self: end;
+    padding-top: 78px;
+    padding-bottom: 54px;
   }
 
   .hero__content::before {
